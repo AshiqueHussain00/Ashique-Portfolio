@@ -56,6 +56,7 @@ project-root/
 │   └── README.md                 # Project README file (you are here)
 │
 └── package.json                  # Dependencies and project metadata
+```
 
 ## Installation
 
@@ -64,25 +65,26 @@ project-root/
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/AshiqueHussain00/Organic-eCommerce-Shop-Website.git
+   ```
    
 2. **Navigate into the project directory:**
     ```bash
    cd Organic-eCommerce-Shop-Website
+   ```
 3. **Install and run the project:**
     ```bash
    npm install
+   ```
 4. **Start the development server**
    ```bash
    npm run dev
+   ```
 5. **Open the project in your browser:**
    ```bash
    http://localhost:4000
    ```
 
 ## Contact Information
-======================
-
-You can reach out to me through the following channels:
 
 * **Email**: [example@email.com](mailto:example@email.com) ![Email Icon](https://img.icons8.com/ios/24/000000/email.png)
 * **LinkedIn**: [https://www.linkedin.com/in/yourlinkedinprofile/](https://www.linkedin.com/in/yourlinkedinprofile/) ![LinkedIn Icon](https://img.icons8.com/ios/24/000000/linkedin.png)
