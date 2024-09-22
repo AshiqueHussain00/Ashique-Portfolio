@@ -77,6 +77,7 @@ project-root/
 5. **Open the project in your browser:**
    ```bash
    http://localhost:4000
+   ```
 
 ## Contact Information
 ======================
