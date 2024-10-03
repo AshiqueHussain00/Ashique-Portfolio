@@ -58,6 +58,7 @@ project-root/
 └── package.json                  # Dependencies and project metadata
 ```
 
+
 ## Installation
 
 ### To run this project locally, follow these steps:
@@ -78,7 +79,7 @@ project-root/
 4. **Start the development server**
    ```bash
    npm run dev
-   ```
+   
 5. **Open the project in your browser:**
    ```bash
    http://localhost:4000
@@ -86,7 +87,7 @@ project-root/
 
 ## Contact Information
 
-* **Email**: [example@email.com](mailto:example@email.com) ![Email Icon](https://img.icons8.com/ios/24/000000/email.png)
-* **LinkedIn**: [https://www.linkedin.com/in/yourlinkedinprofile/](https://www.linkedin.com/in/yourlinkedinprofile/) ![LinkedIn Icon](https://img.icons8.com/ios/24/000000/linkedin.png)
-* **Twitter**: [https://twitter.com/yourtwitterhandle](https://twitter.com/yourtwitterhandle) ![Twitter Icon](https://img.icons8.com/ios/24/000000/twitter.png)
-* **GitHub**: [https://github.com/yourgithubusername](https://github.com/yourgithubusername) ![GitHub Icon](https://img.icons8.com/ios/24/000000/github.png)
+* **Email**: <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png" alt="Email Logo" width="20" height="20" style="vertical-align: middle;"/> [Ashique Hussain Asari](mailto:example@email.com)
+* **LinkedIn**: <img src="https://static.vecteezy.com/system/resources/previews/016/716/470/non_2x/linkedin-icon-free-png.png" alt="LinkedIn Logo" width="20" height="20" style="vertical-align: middle;"/> [Ashique ](https://www.linkedin.com/in/yourlinkedinprofile/) ![LinkedIn Icon](https://img.icons8.com/ios/24/000000/linkedin.png)
+
+* **GitHub**: <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/1024px-Github-desktop-logo-symbol.svg.png" alt="GitHub Logo" width="20" height="20" style="vertical-align: middle;"/> [Ashique](https://github.com/yourgithubusername) 
