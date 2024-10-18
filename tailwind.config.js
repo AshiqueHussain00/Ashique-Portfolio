@@ -15,19 +15,18 @@ export default {
       hard_primary: '#2C742F',
       warning: '#FF8A00',
       danger: '#EA4B48',
-      "light-branding-success" : "#00B207",
-     "branding-success": '#2C742F',
-     "branding-warning": '#FF8A00',
+      "light-branding-success": "#00B207",
+      "branding-success": '#2C742F',
+      "branding-warning": '#FF8A00',
 
-     "green-gray-scale": {
-      
-      50 : "#EDF2EE",
-      400 : '#7A997C',
-      500 : '#618062',
-      600: "#406B42",
-       700 : "#2B572E",
-       900: '#002603',
-     },
+      "green-gray-scale": {
+        50: "#EDF2EE",
+        400: '#7A997C',
+        500: '#618062',
+        600: "#406B42",
+        700: "#2B572E",
+        900: '#002603',
+      },
       red: {
         100: '#fee2e2',
         200: '#fecaca',
@@ -62,7 +61,7 @@ export default {
         900: '#064e3b'
       },
       yellow: {
-        50:'#FCC900',
+        50: '#FCC900',
         100: '#FFFDE7',
         200: '#FFF9C4',
         300: '#FFF59D',
@@ -96,7 +95,7 @@ export default {
         900: '#171717'
       },
       gray: {
-        50 : '#EDF2EE',
+        50: '#EDF2EE',
         100: '#E6E6E6',
         200: '#e5e7eb',
         300: '#d1d5db',
@@ -118,7 +117,7 @@ export default {
         800: '#1a202c',
         900: '#171923'
       },
-      
+
     },
     screens: {
       dxs: '300px',
@@ -135,7 +134,7 @@ export default {
 
       ssm: '600px',
       // => @media (min-width: 640px) { ... }
-      
+
       sm: '640px',
       // => @media (min-width: 640px) { ... }
 
@@ -163,7 +162,7 @@ export default {
       xxl: '1390px',
       // => @media (min-width: 1390px) { ... }
       '1490px': '1490px',
-  // => @media (min-width: 1490px) { ... }
+      // => @media (min-width: 1490px) { ... }
     },
     extend: {}
   },
