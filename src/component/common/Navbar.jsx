@@ -16,13 +16,13 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
-    const toggleMode = () => {
-        setIsDark(!isDark);
-    };
-
-    const toggleNav = () => {
-        setIsOpen(!isOpen);
-    };
+    useEffect(() => {
+        const savedTheme = localStorage.getItem('darkMode');
+        if (savedTheme === 'true') {
+            setIsDark(true);
+            document.body.classList.add('dark-mode');
+        }
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -35,49 +35,56 @@ const Navbar = () => {
         };
     }, []);
 
+    useEffect(() => {
+        document.body.classList.toggle('dark-mode', isDark);
+        localStorage.setItem('darkMode', isDark);
+    }, [isDark]);
+
+    const toggleMode = () => {
+        setIsDark(!isDark);
+    };
+
+    const toggleNav = () => {
+        setIsOpen(!isOpen);
+    };
+
     return (
         <>
-            {/* Main Navbar */}
             <nav
-                className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${scrolled ? "bg-white/10 backdrop-blur-md shadow-lg text-white-100" : "bg-transparent text-black"
-                    }`}
+                className={`w-full fixed top-0 font-semibold left-0 z-50 transition-all duration-300 ${scrolled ? "bg-white/10 backdrop-blur-md shadow-lg" : "bg-transparent"} ${isDark ? "text-white-100" : "text-black-900"}`}
                 style={{ height: '72px' }}
             >
                 <div className="flex items-center justify-between w-11/12 h-full mx-auto md:w-10/12">
                     <div className="px-3 py-2 font-semibold">Logo</div>
 
-                    {/* Desktop Links */}
                     <div className="hidden sm:flex lg:gap-x-6 md:gap-x-4 gap-x-2">
                         {navlink.map((item) => (
-                            <a href={item.path} key={item.id} className={`anime px-3 py-1 transition-all duration-300 rounded-lg ${scrolled ? "text-white-100 hover:text-black-900" : "text-black-900"} `}>
+                            <a href={item.path} key={item.id} className={`anime px-3 py-1 transition-all duration-300 rounded-lg ${scrolled ? "text-white-100 " : "text-black-900"} ${isDark && "text-white-100"}`}>
                                 {item.title}
                             </a>
                         ))}
                     </div>
 
-                    {/* Dark Mode and Menu Button */}
-                    <div className="flex items-center gap-x-6 ">
-                        <button onClick={toggleMode} className="text-2xl hover:text-black-900">
+                    <div className="flex items-center gap-x-6">
+                        <button onClick={toggleMode} className={`text-2xl cursor-pointer ${isDark ? "text-white-100" : scrolled ? "text-black-900" : "text-black-900"}`}>
                             {isDark ? <MdOutlineLightMode /> : <MdOutlineDarkMode />}
                         </button>
 
-                        <div className="flex text-2xl sm:hidden hover:text-black-900">
+                        <div className={`flex text-2xl cursor-pointer sm:hidden ${isDark ? "text-white-100" : scrolled ? "text-black-900" : "text-black-900"}`}>
                             {!isOpen ? (
-                                <RiMenu2Fill onClick={toggleNav} className="cursor-pointer" />
+                                <RiMenu2Fill onClick={toggleNav} />
                             ) : (
-                                <IoMdClose onClick={toggleNav} className="cursor-pointer" />
+                                <IoMdClose onClick={toggleNav} />
                             )}
                         </div>
                     </div>
                 </div>
             </nav>
 
-            {/* Fixed Mobile Menu */}
             <div
-                className={`fixed top-[72px] left-0 right-0 w-full bg-white/30 backdrop-blur-lg sm:hidden flex flex-col items-center gap-y-6 shadow-xl transition-all duration-300 z-40 ${isOpen ? "opacity-100 pointer-events-auto py-4" : "opacity-0 pointer-events-none"
-                    }`}
+                className={`fixed top-[72px] left-0 right-0 w-full bg-white/30 backdrop-blur-lg sm:hidden flex flex-col items-center gap-y-6 shadow-xl transition-all duration-300 z-40 ${isOpen ? "opacity-100 pointer-events-auto py-4" : "opacity-0 pointer-events-none"}`}
                 style={{
-                    maxHeight: isOpen ? "300px" : "0", // Adjust this maxHeight as needed
+                    maxHeight: isOpen ? "300px" : "0",
                     overflow: "hidden",
                 }}
             >

@@ -2,6 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Light Mode (default) */
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Additional styles for dark mode */
+body.dark-mode .navbar {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+body.dark-mode a {
+  color: #ffffff;
+}
+
+body.dark-mode .navbar a:hover {
+  color: #dddddd;
+}
+
+/* Any other dark mode specific styles */
+ body.dark-mode .anime:hover {
+  border: none;
+ }
+ 
+ body.dark-mode .anime::after {
+  background-color: white;
+ }
+
 .gradient {
   background: rgb(2,0,36);
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); 
