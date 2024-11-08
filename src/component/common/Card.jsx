@@ -4,7 +4,7 @@ import { FaEye, FaGithub } from 'react-icons/fa';
 
 const Card = ({ title, description, image, link1, link2, buttonText1, buttonText2, technologies }) => {
     return (
-        <div className="max-w-sm overflow-hidden transition-all duration-300 transform bg-white border border-gray-200 rounded-lg shadow-lg hover:scale-105 dark:bg-gray-800 dark:border-gray-700">
+        <div className="max-w-sm overflow-hidden transition-all duration-300 transform border border-gray-200 rounded-lg shadow-lg hover:scale-105 dark:bg-gray-800 dark:border-gray-700">
             <Link to={link1}>
                 <div className='transition duration-300 hover:scale-105'>
                     <img className="object-cover w-full h-48" src={image} alt={title} />

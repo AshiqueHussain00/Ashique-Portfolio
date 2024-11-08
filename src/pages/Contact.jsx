@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import image from '../assets/p image/image.png';
 import { useForm } from 'react-hook-form';
 import toast, { Toaster } from 'react-hot-toast';
@@ -23,18 +24,38 @@ function Contact() {
                 <div className="flex flex-col items-center justify-center text-center">
                     <img src={image} className="w-5/6 shrink-0 scale-x-[-1]" alt="Contact" />
                     <div className="flex mt-6 space-x-4">
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700">
+                        <Link
+                            to={{ pathname: "https://facebook.com" }}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-blue-700"
+                        >
                             <FaFacebook size={24} />
-                        </a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700">
+                        </Link>
+                        <Link
+                            to={{ pathname: "https://instagram.com" }}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-pink"
+                        >
                             <FaInstagram size={24} />
-                        </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-blue-800 hover:text-blue-900">
+                        </Link>
+                        <Link
+                            to={{ pathname: "https://linkedin.com" }}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-blue-900"
+                        >
                             <FaLinkedin size={24} />
-                        </a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-500">
+                        </Link>
+                        <Link
+                            to={{ pathname: "https://twitter.com" }}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-blue-500"
+                        >
                             <FaTwitter size={24} />
-                        </a>
+                        </Link>
                     </div>
                 </div>
 

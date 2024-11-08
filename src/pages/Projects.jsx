@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from '../component/common/card';
+import Card from '../component/common/Card';
 import { cardData } from '../data/Projects-data';
 import { motion } from 'framer-motion';
 

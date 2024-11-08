@@ -18,6 +18,7 @@ export default {
       "light-branding-success": "#00B207",
       "branding-success": '#2C742F',
       "branding-warning": '#FF8A00',
+      pink: '#C2185B',
 
       "green-gray-scale": {
         50: "#EDF2EE",
