@@ -6,8 +6,7 @@ export const Certificate = [
     issuer: "Simplilearn",
     issueDate: "Jun 2024",
     skills: ["SQL"],
-
-    documentLink: "https://example.com/sql-certification", // Update with your document link
+    documentLink: "https://example.com/sql-certification", 
   },
   {
     id: 2,
@@ -15,9 +14,8 @@ export const Certificate = [
     title: "React",
     issuer: "HackerRank",
     issueDate: "",
-    skills: [],
-
-    documentLink: "https://example.com/react-certification", // Update with your document link
+    skills: ["React","Redux", "Hooks", "Context API"],
+    documentLink: "https://example.com/react-certification", 
   },
   {
     id: 3,
@@ -26,8 +24,7 @@ export const Certificate = [
     issuer: "ARDENT COMPUTECH PVT LTD",
     issueDate: "Sep 2023",
     skills: ["Machine Learning", "Python (Programming Language)"],
-
-    documentLink: "https://example.com/ml-certification", // Update with your document link
+    documentLink: "https://example.com/ml-certification", 
   },
   {
     id: 4,
@@ -36,8 +33,7 @@ export const Certificate = [
     issuer: "ARDENT COMPUTECH PVT LTD",
     issueDate: "Jan 2023",
     skills: ["Network Hardware", "Computer Hardware", "Networking"],
-
-    documentLink: "https://example.com/hardware-networking", // Update with your document link
+    documentLink: "https://example.com/hardware-networking", 
   },
   {
     id: 5,
@@ -46,8 +42,7 @@ export const Certificate = [
     issuer: "Simplilearn",
     issueDate: "Jan 2023",
     skills: ["Introduction to IOT"],
-
-    documentLink: "https://example.com/iot-certification", // Update with your document link
+    documentLink: "https://example.com/iot-certification", 
   },
   {
     id: 6,
@@ -56,8 +51,7 @@ export const Certificate = [
     issuer: "Great Learning",
     issueDate: "Nov 2022",
     skills: ["JavaScript"],
-
-    documentLink: "https://example.com/js-certification", // Update with your document link
+    documentLink: "https://example.com/js-certification", 
   },
   {
     id: 7,
@@ -66,8 +60,7 @@ export const Certificate = [
     issuer: "Great Learning",
     issueDate: "Oct 2022",
     skills: ["HTML5"],
-
-    documentLink: "https://example.com/html-certification", // Update with your document link
+    documentLink: "https://example.com/html-certification", 
   },
   {
     id: 8,
@@ -76,7 +69,7 @@ export const Certificate = [
     issuer: "National Youth Computer Literacy Drive - India",
     issueDate: "Oct 2020",
     skills: ["Microsoft Office"],
-    documentLink: "https://example.com/webinar-certificate", // Update with your document link
+    documentLink: "https://example.com/webinar-certificate", 
   },
   {
     id: 9,
@@ -85,8 +78,7 @@ export const Certificate = [
     issuer: "Great Learning",
     issueDate: "Oct 2021",
     skills: ["Microsoft Office"],
-
-    documentLink: "https://example.com/excel-certification", // Update with your document link
+    documentLink: "https://example.com/excel-certification", 
   },
   {
     id: 10,
@@ -95,9 +87,7 @@ export const Certificate = [
     issuer: "Asansol Institute Of Engineering And Management-Polytechnic",
     issueDate: "Dec 2021",
     skills: [],
-
-
-    documentLink: "https://example.com/computer-application", // Update with your document link
+    documentLink: "https://example.com/computer-application", 
   },
   {
     id: 11,
@@ -106,9 +96,7 @@ export const Certificate = [
     issuer: "MathTech Thinking Foundation",
     issueDate: "Dec 2023",
     skills: ["Flask", "Python (Programming Language)", "Python", "Pandas (Software)"],
-
-    documentLink: "https://example.com/python-webinar", // Update with your document link
-
+    documentLink: "https://example.com/python-webinar", 
   },
 ];
 

@@ -1,117 +1,218 @@
-import React from 'react';
-import { Link } from "react-router-dom";
-import image from '../assets/p image/image.png';
-import { useForm } from 'react-hook-form';
-import toast, { Toaster } from 'react-hot-toast';
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import image from '../assets/p image/image.png'
+import { useForm } from 'react-hook-form'
+import toast, { Toaster } from 'react-hot-toast'
+import { motion } from 'framer-motion'
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FaXTwitter } from "react-icons/fa6";
+import { IoIosSend } from "react-icons/io";
+import emailjs from 'emailjs-com'
 
 function Contact() {
-    const { register, handleSubmit, formState: { errors }, reset } = useForm();
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+        reset
+    } = useForm()
 
     const onSubmit = (data) => {
-        console.log(data);
-        toast.success('Message sent successfully!');
-        reset();
-    };
+        // Use EmailJS to send the email
+        emailjs
+            .send(
+                'service_a014xps',  // Replace with your service ID
+                'template_q59neux',  // Replace with your template ID
+                {
+                    name: data.name,
+                    email: data.email,
+                    phone: data.phone,
+                    message: data.message,
+                },
+                'HFsuS9dBO5R8lS7V_'  // Replace with your User ID from EmailJS
+            )
+            .then(
+                (response) => {
+                    console.log('Email sent successfully!', response);
+                    toast.success('Message sent successfully!')
+                },
+                (error) => {
+                    console.error('Error sending email:', error);
+                    toast.error('Failed to send message, please try again.')
+                }
+            )
+        reset()  // Reset the form fields after submission
+    }
 
     return (
-        <div className="font-[sans-serif] max-w-6xl mx-auto relative shadow-[0_4px_20px_rgba(29,78,216,0.6)] rounded-3xl overflow-hidden mt-4">
+        <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            className="font-[sans-serif] max-w-6xl mx-auto relative shadow-[0_4px_20px_rgba(29,78,216,0.6)] rounded-3xl overflow-hidden mt-4"
+        >
             <Toaster position="top-center" reverseOrder={false} />
-            <div className="absolute w-20 h-20 bg-blue-400 rounded-full -bottom-6 -left-6"></div>
-            <div className="absolute w-20 h-20 bg-blue-400 rounded-full -top-6 -right-6"></div>
+            <motion.h2
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.7 }}
+                className="mt-4 mb-2 text-3xl font-bold text-center text-blue-600"
+            >
+                Contact us
+            </motion.h2>
+
+            {/* Decorative circles */}
+            <motion.div
+                initial={{ opacity: 0, scale: 0.7 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.3 }}
+                className="absolute w-20 h-20 bg-blue-400 rounded-full -bottom-6 -left-6"
+            />
+            <motion.div
+                initial={{ opacity: 0, scale: 0.7 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.3 }}
+                className="absolute w-20 h-20 bg-blue-400 rounded-full -top-6 -right-6"
+            />
 
             <div className="grid gap-8 px-6 py-8 md:grid-cols-2">
-                <div className="flex flex-col items-center justify-center text-center">
-                    <img src={image} className="w-5/6 shrink-0 scale-x-[-1]" alt="Contact" />
-                    <div className="flex mt-6 space-x-4">
-                        <Link
-                            to={{ pathname: "https://facebook.com" }}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-blue-700"
-                        >
-                            <FaFacebook size={24} />
-                        </Link>
-                        <Link
-                            to={{ pathname: "https://instagram.com" }}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-pink"
-                        >
-                            <FaInstagram size={24} />
-                        </Link>
-                        <Link
-                            to={{ pathname: "https://linkedin.com" }}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-blue-900"
-                        >
-                            <FaLinkedin size={24} />
-                        </Link>
-                        <Link
-                            to={{ pathname: "https://twitter.com" }}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-blue-500"
-                        >
-                            <FaTwitter size={24} />
-                        </Link>
-                    </div>
-                </div>
+                {/* Image and social links section */}
+                <motion.div
+                    initial={{ x: -60, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.6 }}
+                    className="flex flex-col items-center justify-center text-center"
+                >
+                    <img
+                        src={image}
+                        className="w-5/6 shrink-0 scale-x-[-1]"
+                        alt="Contact"
+                    />
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.6 }}
+                        className="flex mt-6 space-x-4"
+                    >
+                        {/* Social Media Icons with animations */}
+                        {[{ icon: FaFacebook, link: 'https://www.facebook.com/ashique8927', color: 'hover:text-blue-700' },
+                        { icon: FaInstagram, link: 'https://www.instagram.com/_.ashique00/', color: 'hover:text-pink' },
+                        { icon: FaLinkedin, link: 'https://www.linkedin.com/in/ashique-hussain-553166251/', color: 'hover:text-blue-700' },
+                        { icon: FaXTwitter, link: 'https://x.com/ashique_0000', color: 'hover:text-pink' }].map((social, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.7 + index * 0.1 }}
+                            >
+                                <Link
+                                    to={social.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={social.color}
+                                >
+                                    {React.createElement(social.icon, { size: 24 })}
+                                </Link>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </motion.div>
 
-                <form onSubmit={handleSubmit(onSubmit)} className="rounded-tl-3xl rounded-bl-3xl">
-                    <h2 className="mb-6 text-2xl font-bold text-center text-blue-600">Contact us</h2>
+                {/* Form section */}
+                <motion.form
+                    initial={{ x: 50, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                    onSubmit={handleSubmit(onSubmit)}
+                    className="rounded-tl-3xl rounded-bl-3xl"
+                >
                     <div className="relative max-w-md mx-auto space-y-3">
-                        <label htmlFor="name" className="block mb-2 text-sm font-medium dark:text-white-100">Name</label>
-                        <input
-                            type="text"
-                            placeholder="Name"
-                            {...register("name", { required: "Name is required" })}
-                            className="w-full px-4 py-3 text-sm bg-gray-100 rounded-md outline-blue-600 text-black-900 focus-within:bg-transparent"
-                        />
-                        {errors.name && <p className="text-xs text-red-500">{errors.name.message}</p>}
+                        {/* Animated Input Fields */}
+                        {[{
+                            label: 'Name',
+                            placeholder: 'Name',
+                            name: 'name',
+                            type: 'text',
+                            error: errors.name,
+                            validation: { required: 'Name is required' }
+                        }, {
+                            label: 'Email',
+                            placeholder: 'Email',
+                            name: 'email',
+                            type: 'email',
+                            error: errors.email,
+                            validation: { required: 'Email is required', pattern: { value: /^\S+@\S+$/i, message: 'Invalid email format' } }
+                        }, {
+                            label: 'Phone',
+                            placeholder: 'Phone No.',
+                            name: 'phone',
+                            type: 'text',
+                            error: errors.phone,
+                            validation: { required: 'Phone number is required', length: { min: 10, max: 10 }, pattern: { value: /^[0-9]+$/, message: 'Invalid phone number' } }
+                        }].map((input, index) => (
+                            <motion.div
+                                key={input.name}
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ delay: 0.1 * (index + 1) }}
+                            >
+                                <label
+                                    htmlFor={input.name}
+                                    className="block mb-2 text-sm font-medium"
+                                >
+                                    {input.label}
+                                </label>
+                                <input
+                                    type={input.type}
+                                    placeholder={input.placeholder}
+                                    {...register(input.name, input.validation)}
+                                    className="w-full px-4 py-3 text-sm bg-gray-100 rounded-md text-black-900 outline-blue-600 focus-within:bg-transparent"
+                                />
+                                {input.error && (
+                                    <p className="text-xs text-red-500">{input.error.message}</p>
+                                )}
+                            </motion.div>
+                        ))}
 
-                        <label htmlFor="email" className="block mb-2 text-sm font-medium dark:text-white-100">Email</label>
-                        <input
-                            type="email"
-                            placeholder="Email"
-                            {...register("email", { required: "Email is required", pattern: { value: /^\S+@\S+$/i, message: "Invalid email format" } })}
-                            className="w-full px-4 py-3 text-sm bg-gray-100 rounded-md text-black-900 outline-blue-600 focus-within:bg-transparent"
-                        />
-                        {errors.email && <p className="text-xs text-red-500">{errors.email.message}</p>}
-
-                        <label htmlFor="phone" className="block mb-2 text-sm font-medium dark:text-white-100">Phone</label>
-                        <input
-                            type="text"
-                            placeholder="Phone No."
-                            {...register("phone", { required: "Phone number is required", pattern: { value: /^[0-9]+$/, message: "Invalid phone number" } })}
-                            className="w-full px-4 py-3 text-sm bg-gray-100 rounded-md text-black-900 outline-blue-600 focus-within:bg-transparent"
-                        />
-                        {errors.phone && <p className="text-xs text-red-500">{errors.phone.message}</p>}
-
-                        <label htmlFor="message" className="block mb-2 text-sm font-medium dark:text-white-100">Message</label>
-                        <textarea
-                            placeholder="Message"
-                            rows="6"
-                            {...register("message", { required: "Message is required" })}
-                            className="w-full px-4 pt-3 text-sm bg-gray-100 rounded-md outline-blue-600 text-black-900 focus-within:bg-transparent"
-                        />
-                        {errors.message && <p className="text-xs text-red-500">{errors.message.message}</p>}
-
-                        <button
-                            type="submit"
-                            className="text-white-100 w-full bg-blue-500 hover:bg-blue-600 rounded-md text-sm px-6 py-3 !mt-6"
+                        {/* Animated Text Area */}
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 0.1 * (4 + 1) }}
                         >
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="#fff" className="inline mr-2" viewBox="0 0 548.244 548.244">
-                                <path fillRule="evenodd" d="M392.19 156.054 211.268 281.667 22.032 218.58C8.823 214.168-.076 201.775 0 187.852c.077-13.923 9.078-26.24 22.338-30.498L506.15 1.549c11.5-3.697 24.123-.663 32.666 7.88 8.542 8.543 11.577 21.165 7.879 32.666L390.89 525.906c-4.258 13.26-16.575 22.261-30.498 22.338-13.923.076-26.316-8.823-30.728-22.032l-63.393-190.153z" clipRule="evenodd" data-original="#000000" />
-                            </svg>
+                            <label
+                                htmlFor="message"
+                                className="block mb-2 text-sm font-medium"
+                            >
+                                Message
+                            </label>
+                            <textarea
+                                placeholder="Message"
+                                rows="6"
+                                {...register('message', { required: 'Message is required' })}
+                                className="w-full px-4 pt-3 text-sm bg-gray-100 rounded-md text-black-900 outline-blue-600 focus-within:bg-transparent"
+                            />
+                            {errors.message && (
+                                <p className="text-xs text-red-500">{errors.message.message}</p>
+                            )}
+                        </motion.div>
+
+                        {/* Animated Submit Button */}
+                        <motion.button
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.8 }}
+                            type="submit"
+                            className="flex items-center justify-center w-full px-6 py-3 mt-6 text-sm font-semibold text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+                        >
                             Send Message
-                        </button>
+                            <IoIosSend className="ml-2 text-lg" />
+                        </motion.button>
                     </div>
-                </form>
+                </motion.form>
             </div>
-        </div>
-    );
+        </motion.div>
+    )
 }
 
-export default Contact;
+export default Contact
