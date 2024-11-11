@@ -11,7 +11,7 @@ const CertificateCard = ({ logo, title, issuer, issueDate, skills, documentLink 
         alt={`${title} logo`}
         className="object-cover w-full mb-3 rounded-lg h-60 text-white-100"
       />
-      <h3 className="text-lg font-semibold text-center text-white-100">{title}</h3>
+      <h3 className="text-lg font-semibold text-center uppercase text-white-100">{title}</h3>
       <p className="mt-1 text-center text-white-100">{issuer}</p>
       <p className="mt-2 text-sm text-center text-white-100">Issued: {issueDate}</p>
       <p className="mt-2 text-sm text-center text-white-100">

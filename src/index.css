@@ -4,17 +4,17 @@
 
 /* Light Mode (default) */
 body {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #121212;
+ color: white;
 }
 
 /* Dark Mode */
-body.dark-mode {
+/* body.dark-mode {
   background-color: #121212;
   color: #ffffff;
 }
 
-/* Additional styles for dark mode */
+
 body.dark-mode .navbar {
   background-color: #333333;
   color: #ffffff;
@@ -28,14 +28,14 @@ body.dark-mode .navbar a:hover {
   color: #dddddd;
 }
 
-/* Any other dark mode specific styles */
+
  body.dark-mode .anime:hover {
   border: none;
  }
  
  body.dark-mode .anime::after {
   background-color: white;
- }
+ } */
 
 .gradient {
   background: rgb(2,0,36);
@@ -58,7 +58,7 @@ body.dark-mode .navbar a:hover {
   height: 3px;
   left: 50%;
   bottom: -5px;
-  background-color: black;
+  background-color: white;
   transition: all ease-out 0.3s;
 }
 

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
 import { RiMenu2Fill } from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
 
@@ -12,17 +11,8 @@ const navlink = [
 ];
 
 const Navbar = () => {
-    const [isDark, setIsDark] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
-
-    useEffect(() => {
-        const savedTheme = localStorage.getItem('darkMode');
-        if (savedTheme === 'true') {
-            setIsDark(true);
-            document.body.classList.add('dark-mode');
-        }
-    }, []);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -35,15 +25,6 @@ const Navbar = () => {
         };
     }, []);
 
-    useEffect(() => {
-        document.body.classList.toggle('dark-mode', isDark);
-        localStorage.setItem('darkMode', isDark);
-    }, [isDark]);
-
-    const toggleMode = () => {
-        setIsDark(!isDark);
-    };
-
     const toggleNav = () => {
         setIsOpen(!isOpen);
     };
@@ -51,7 +32,7 @@ const Navbar = () => {
     return (
         <>
             <nav
-                className={`w-full fixed top-0 font-semibold left-0 z-50 transition-all duration-300 ${scrolled ? "bg-white/10 backdrop-blur-md shadow-lg" : "bg-transparent"} ${isDark ? "text-white-100" : "text-black-900"}`}
+                className={`w-full fixed top-0 font-semibold left-0 z-50 transition-all duration-300 ${scrolled ? "bg-white/10 backdrop-blur-md shadow-lg" : "bg-transparent"} text-white-100`}
                 style={{ height: '72px' }}
             >
                 <div className="flex items-center justify-between w-11/12 h-full mx-auto md:w-10/12">
@@ -59,18 +40,14 @@ const Navbar = () => {
 
                     <div className="hidden sm:flex lg:gap-x-6 md:gap-x-4 gap-x-2">
                         {navlink.map((item) => (
-                            <a href={item.path} key={item.id} className={`anime px-3 py-1 transition-all duration-300 rounded-lg ${scrolled ? "text-white-100 " : "text-black-900"} ${isDark && "text-white-100"}`}>
+                            <a href={item.path} key={item.id} className={`anime px-3 py-1 transition-all duration-300 rounded-lg ${scrolled ? "text-white-100" : "text-white-100"}`}>
                                 {item.title}
                             </a>
                         ))}
                     </div>
 
                     <div className="flex items-center gap-x-6">
-                        <button onClick={toggleMode} className={`text-2xl cursor-pointer ${isDark ? "text-white-100" : scrolled ? "text-black-900" : "text-black-900"}`}>
-                            {isDark ? <MdOutlineLightMode /> : <MdOutlineDarkMode />}
-                        </button>
-
-                        <div className={`flex text-2xl cursor-pointer sm:hidden ${isDark ? "text-white-100" : scrolled ? "text-black-900" : "text-black-900"}`}>
+                        <div className="flex text-2xl cursor-pointer sm:hidden text-white-100">
                             {!isOpen ? (
                                 <RiMenu2Fill onClick={toggleNav} />
                             ) : (
@@ -89,7 +66,7 @@ const Navbar = () => {
                 }}
             >
                 {navlink.map((item) => (
-                    <a href={item.path} key={item.id} className="px-3 py-1 transition-all duration-300 rounded-lg anime text-white-100 hover:text-black-900">
+                    <a href={item.path} key={item.id} className="px-3 py-1 transition-all duration-300 rounded-lg anime text-white-100 ">
                         {item.title}
                     </a>
                 ))}

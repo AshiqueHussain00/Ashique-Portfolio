@@ -1,0 +1,90 @@
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { FaEye, FaGithub } from 'react-icons/fa';
+import Ashique from '../assets/p image/Ashique.jpg';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS styles
+
+const HeroSection = () => {
+    const roles = ['FullStack Developer', 'Frontend Developer', 'Backend Developer'];
+    const [roleIndex, setRoleIndex] = useState(0);
+    const [currentText, setCurrentText] = useState('');
+    const [isDeleting, setIsDeleting] = useState(false);
+    const [charIndex, setCharIndex] = useState(0);
+
+    useEffect(() => {
+        AOS.init({ duration: 1000 }); // Initialize AOS with a default duration for animations
+
+        const handleTyping = () => {
+            if (isDeleting) {
+                if (charIndex > 0) {
+                    setCharIndex((prev) => prev - 1);
+                    setCurrentText(roles[roleIndex].substring(0, charIndex));
+                } else {
+                    setIsDeleting(false);
+                    setRoleIndex((prev) => (prev + 1) % roles.length);
+                }
+            } else {
+                if (charIndex < roles[roleIndex].length) {
+                    setCharIndex((prev) => prev + 1);
+                    setCurrentText(roles[roleIndex].substring(0, charIndex + 1));
+                } else {
+                    setIsDeleting(true);
+                }
+            }
+        };
+
+        const timer = setTimeout(handleTyping, isDeleting ? 50 : 160);
+        return () => clearTimeout(timer);
+    }, [charIndex, isDeleting, roleIndex]);
+
+    return (
+        <section className="relative w-full px-4 py-14 text-white-100 lg:px-0">
+            <div className="flex flex-col items-center gap-8 mx-auto max-w-7xl lg:flex-row lg:gap-16">
+                <div className="flex-1 text-center lg:text-left" data-aos="fade-up" data-aos-delay="200">
+                    <h4 className="text-lg sm:text-2xl">
+                        Hello, My name is{' '}
+                        <span className="font-serif font-semibold text-rose-400 sm:text-2xl">Ashique Hussain Ansari</span>
+                    </h4>
+                    <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl">
+                        I'm{' '}
+                        <span className="relative font-bold text-green-400">
+                            {currentText}
+                            <span className="animate-blink">|</span>
+                        </span>
+                    </h1>
+                    <p className="max-w-2xl mx-auto mt-4 text-base sm:text-lg lg:mx-0" data-aos="fade-up" data-aos-delay="400">
+                        Experienced full-stack developer with 2+ years of hands-on experience in React, Tailwind CSS, and related technologies. Proficient in front-end and back-end development, with a strong foundation in building responsive, scalable applications.
+                    </p>
+                    <div className="flex justify-center gap-4 mt-6 lg:justify-start">
+                        <Link
+                            to="#"
+                            className="inline-flex items-center px-4 py-2 text-sm font-medium text-white transition-all duration-300 transform rounded-lg shadow-lg bg-gradient-to-r from-blue-500 to-purple-500 hover:shadow-2xl hover:scale-105 hover:rotate-1 focus:outline-none focus:ring-4 focus:ring-blue-300"
+                            data-aos="fade-up" data-aos-delay="600"
+                        >
+                            View Resume
+                            <FaEye className="ml-2" />
+                        </Link>
+                        <Link
+                            to="#"
+                            className="inline-flex items-center px-6 py-2 text-sm font-medium text-white transition-all duration-300 transform rounded-lg shadow-lg bg-gradient-to-r from-green-500 to-teal-500 hover:shadow-2xl hover:scale-105 hover:-rotate-1 focus:outline-none focus:ring-4 focus:ring-green-300"
+                            data-aos="fade-up" data-aos-delay="800"
+                        >
+                            View GitHub Profile
+                            <FaGithub className="ml-2" />
+                        </Link>
+                    </div>
+                </div>
+                <div className="relative flex-shrink-0 max-w-xs mt-8 sm:max-w-sm lg:max-w-md lg:mt-0" data-aos="zoom-in" data-aos-delay="400">
+                    <img
+                        className="rounded-tl-[3rem] rounded-br-[3rem] w-full h-[60vh] border-4 border-purple-500 shadow-xl transform transition-transform duration-500 hover:scale-105"
+                        src={Ashique}
+                        alt="My Pic"
+                    />
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default HeroSection;

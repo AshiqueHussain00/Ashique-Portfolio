@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  
   theme: {
     fontWeight: {
       thin: 300,
@@ -165,7 +167,22 @@ export default {
       '1490px': '1490px',
       // => @media (min-width: 1490px) { ... }
     },
-    extend: {}
+    extend: {
+      
+    },
+    keyframes: {
+      blink: {
+        '0%, 50%, 100%': { opacity: 1 },
+        '25%, 75%': { opacity: 0 },
+      },
+      fadeIn: {
+        '0%': { opacity: 0 },
+        '100%': { opacity: 1 },
+      },
+    },
   },
-  plugins: []
+  plugins: [
+    
+  ]
+  
 }
