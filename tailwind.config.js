@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   
   theme: {
@@ -120,69 +119,76 @@ export default {
         800: '#1a202c',
         900: '#171923'
       },
-
     },
     screens: {
       dxs: '300px',
-      // => @media (min-width: 300px) { ... }
-
       xxs: '400px',
-      // => @media (min-width: 400px) { ... }
-
       xsm: '458px',
-      // => @media (min-width: 458px) { ... }
-
       xs: '500px',
-      // => @media (min-width: 500px) { ... }
-
       ssm: '600px',
-      // => @media (min-width: 640px) { ... }
-
       sm: '640px',
-      // => @media (min-width: 640px) { ... }
-
       md: '768px',
-      // => @media (min-width: 768px) { ... }
-
       smd: '800px',
-      // => @media (min-width: 800px) { ... }
-
       mmd: '860px',
-      // => @media (min-width: 860px) { ... }
-
       xmd: '930px',
-      // => @media (min-width: 930px) { ... }
-
       lg: '1024px',
-      // => @media (min-width: 1024px) { ... }
-
       xlg: '1110px',
-      // => @media (min-width: 1110px) { ... }
-
       xl: '1280px',
-      // => @media (min-width: 1280px) { ... }
-
       xxl: '1390px',
-      // => @media (min-width: 1390px) { ... }
       '1490px': '1490px',
-      // => @media (min-width: 1490px) { ... }
     },
     extend: {
-      
-    },
-    keyframes: {
-      blink: {
-        '0%, 50%, 100%': { opacity: 1 },
-        '25%, 75%': { opacity: 0 },
+      animation: {
+        html: 'htmlAnimation 2s ease-in-out forwards',
+        css: 'cssAnimation 2s ease-in-out forwards',
+        javascript: 'javascriptAnimation 2s ease-in-out forwards',
+        viteReact: 'viteReactAnimation 2s ease-in-out forwards',
+        tailwind: 'tailwindAnimation 2s ease-in-out forwards',
+        sql: 'sqlAnimation 2s ease-in-out forwards',
+        python: 'pythonAnimation 2s ease-in-out forwards',
+        machineLearning: 'machineLearningAnimation 2s ease-in-out forwards',
       },
-      fadeIn: {
-        '0%': { opacity: 0 },
-        '100%': { opacity: 1 },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
+        htmlAnimation: {
+          '0%': { width: '0%' },
+          '100%': { width: '90%' },
+        },
+        cssAnimation: {
+          '0%': { width: '0%' },
+          '100%': { width: '85%' },
+        },
+        javascriptAnimation: {
+          '0%': { width: '0%' },
+          '100%': { width: '70%' },
+        },
+        viteReactAnimation: {
+          '0%': { width: '0%' },
+          '100%': { width: '75%' },
+        },
+        tailwindAnimation: {
+          '0%': { width: '0%' },
+          '100%': { width: '80%' },
+        },
+        sqlAnimation: {
+          '0%': { width: '0%' },
+          '100%': { width: '60%' },
+        },
+        pythonAnimation: {
+          '0%': { width: '0%' },
+          '100%': { width: '65%' },
+        },
+        machineLearningAnimation: {
+          '0%': { width: '0%' },
+          '100%': { width: '50%' },
+        },
       },
     },
   },
   plugins: [
-    
+    // Add any additional plugins here
   ]
-  
-}
+};

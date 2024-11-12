@@ -19,7 +19,7 @@ const AboutSummary = () => {
                 
                 {/* About Content */}
                 <div className="w-full lg:w-9/12" data-aos="fade-right" data-aos-duration="600">
-                    <h2 className="mb-4 text-3xl font-semibold">Full-Stack Developer</h2>
+                    {/* <h2 className="mb-4 text-3xl font-semibold">Full-Stack Developer</h2>+ */}
                     <p className="mb-6 text-lg">
                         Diploma in Computer Science with expertise in modern web development technologies. Skilled in creating responsive, scalable applications and eager to collaborate on innovative projects.
                     </p>

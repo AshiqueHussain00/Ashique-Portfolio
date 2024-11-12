@@ -3,12 +3,14 @@ import Projects from './Projects'
 import Certificate from './Certificate'
 import HeroSection from './Herosection'
 import AboutSummary from './AboutSummary'
+import Skills from './Skills'
 
 function Home() {
   return (
     <div>
         <HeroSection/>
         <AboutSummary/>
+        <Skills/>
         <div>
         <Projects limit={4} />
         </div>
