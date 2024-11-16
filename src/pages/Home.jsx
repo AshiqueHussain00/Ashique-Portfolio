@@ -9,7 +9,7 @@ function Home() {
   return (
     <div>
         <HeroSection/>
-        <AboutSummary/>
+        <AboutSummary/>     
         <Skills/>
         <div>
         <Projects limit={4} />
