@@ -10,7 +10,7 @@ function Projects({ limit }) {
         visible: { opacity: 1, y: 0 }, // Final state (visible)
     };
     const headingVariants = {
-        hidden: { opacity: 0, y: 20 }, // Initial state for the heading
+        hidden: { opacity: 0, y: 30 }, // Initial state for the heading
         visible: { opacity: 1, y: 0 }, // Final state for the heading
     };
     // Limit the number of cards shown based on the 'limit' prop
@@ -25,7 +25,7 @@ function Projects({ limit }) {
                     initial="hidden"
                     whileInView="visible"
                     transition={{
-                        duration: 0.6, // Adjust duration as needed
+                        duration: 0.3, // Adjust duration as needed
                         delay: 0.1, // Delay before starting the animation
                     }}
                     viewport={{ once: true, amount: 0.2 }} // Trigger animation when 20% of the heading is in view
@@ -33,6 +33,21 @@ function Projects({ limit }) {
                     {" "}
                     My Project
                 </motion.h1>
+                <motion.div
+                    className="mb-10 text-justify lg:text-center"
+                    variants={headingVariants}
+                    initial='hidden'
+                    whileInView='visible'
+                    transition={{
+                        duration: 0.4, // Adjust duration as needed
+                        delay: 0.1 // Delay before starting the animation
+                    }}
+                    viewport={{ once: true, amount: 0.2 }} // Trigger animation when 20% of the heading is in view
+                >
+                    <p className="mb-4 text-lg">
+                        I am a web developer with 2 years of hands-on experience in website and web application development. Throughout my career, I have successfully completed various projects, including portfolio websites, institute websites, one-page websites, and front-end projects. During a 3-month internship, I developed and completed three front-end projects, along with several others. Below are the live links and GitHub repositories for my projects, showcasing my expertise in web development
+                    </p>
+                </motion.div>
                 <div className="flex flex-wrap gap-6 ">
                     {limitedCardData.map((data, index) => (
                         <motion.div
