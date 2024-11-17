@@ -1,28 +1,44 @@
-import sql from '../assets/Certificate/Fundamentals of Database  What is SQL_Ashique Husssain Ansari.pdf'
-import react from "../assets/Certificate/react_basic certificate Ashique Hussain Ansari.pdf"
-import hardware from '../assets/Certificate/BASIC CONCEPT OF HARDWARE AND NETWORKING.pdf'
-import aiemp_webinar from '../assets/Certificate/College webinar_Ashique Hussain Ansari.pdf'
-import asp from '../assets/Certificate/asp.net mvc_Ashique Hussain Ansari.pdf'
-import machineLearning from '../assets/Certificate/iNTERNSHIP CERTIFICATE ON MACHINE LEARNING.pdf'
-import frontend from '../assets/Certificate/FONT END DEVELOPMENT_Ashique Hussain Ansari.pdf'
-import javascript from '../assets/Certificate/JavaScript_Ashique Hussain Ansari.pdf'
-import pythonWebinar from '../assets/Certificate/Python library webinar_Ashique Hussain Ansari.pdf'
-import iot from '../assets/Certificate/Introduction to IoT_Ashique Hussain Ansari.pdf'
-import excel from '../assets/Certificate/EXCEL BEGINNER_Ashique Hussain Ansari.pdf'
+import sql from '../assets/Certificate PDF/Fundamentals of Database  What is SQL_Ashique Husssain Ansari.pdf'
+import react from "../assets/Certificate PDF/react_basic certificate Ashique Hussain Ansari.pdf"
+import hardware from '../assets/Certificate PDF/BASIC CONCEPT OF HARDWARE AND NETWORKING.pdf'
+import aiemp_webinar from '../assets/Certificate PDF/College webinar_Ashique Hussain Ansari.pdf'
+import asp from '../assets/Certificate PDF/asp.net mvc_Ashique Hussain Ansari.pdf'
+import machineLearning from '../assets/Certificate PDF/iNTERNSHIP CERTIFICATE ON MACHINE LEARNING.pdf'
+import frontend from '../assets/Certificate PDF/FONT END DEVELOPMENT_Ashique Hussain Ansari.pdf'
+import javascript from '../assets/Certificate PDF/JavaScript_Ashique Hussain Ansari.pdf'
+import pythonWebinar from '../assets/Certificate PDF/Python library webinar_Ashique Hussain Ansari.pdf'
+import iot from '../assets/Certificate PDF/Introduction to IoT_Ashique Hussain Ansari.pdf'
+import excel from '../assets/Certificate PDF/EXCEL BEGINNER_Ashique Hussain Ansari.pdf'
+import diploma from '../assets/Certificate PDF/Deploma in computer application_Ashique Hussain Ansari.pdf'
+import internship from '../assets/Certificate PDF/Certificate Ashique Hussain Ansari .pdf'
+
+import sql2 from '../assets/Certificate img/Fundamentals of Database  What is SQL_Ashique Husssain Ansari.jpg'
+import react2 from "../assets/Certificate img/react_basic certificate Ashique Hussain Ansari.jpg"
+import hardware2 from '../assets/Certificate img/BASIC CONCEPT OF HARDWARE AND NETWORKING.jpg'
+import aiemp_webinar2 from '../assets/Certificate img/College webinar_Ashique Hussain Ansari.jpg'
+import asp2 from '../assets/Certificate img/asp.net mvc_Ashique Hussain Ansari.jpg'
+import machineLearning2 from '../assets/Certificate img/iNTERNSHIP CERTIFICATE ON MACHINE LEARNING.jpg'
+import frontend2 from '../assets/Certificate img/FONT END DEVELOPMENT_Ashique Hussain Ansari.jpg'
+import javascript2 from '../assets/Certificate img/JavaScript_Ashique Hussain Ansari.jpg'
+import pythonWebinar2 from '../assets/Certificate img/Python library webinar_Ashique Hussain Ansari.jpg'
+import iot2 from '../assets/Certificate img/Introduction to IoT_Ashique Hussain Ansari.jpg'
+import excel2 from '../assets/Certificate img/EXCEL BEGINNER_Ashique Hussain Ansari.jpg'
+import diploma2 from '../assets/Certificate img/Deploma in computer application_Ashique Hussain Ansari.jpg'
+import internship2 from '../assets/Certificate img/Certificate Ashique Hussain Ansari.jpg'
 
 export const Certificate = [
   {
     id: 1,
-    logo: 'https://marketplace.canva.com/EAFGv9WhSmc/1/0/1600w/canva-blue-and-yellow-minimalist-employee-of-the-month-certificate-jaIc19nYjY4.jpg',
-    title: 'Fundamentals of Database What is SQL?',
-    issuer: 'Simplilearn',
-    issueDate: 'Jun 2024',
-    skills: ['SQL'],
-    documentLink: sql
+    logo: internship2,
+    title: 'Frontend Internship Certificate',
+    issuer: 'Future Core Inovations',
+    issueDate: 'Oct 2024',
+    skills: ['Vite + Reactjs', 'Tellwind Css'],
+    documentLink: internship
   },
   {
     id: 2,
-    logo: 'https://marketplace.canva.com/EAFGv9WhSmc/1/0/1600w/canva-blue-and-yellow-minimalist-employee-of-the-month-certificate-jaIc19nYjY4.jpg',
+    logo: react2,
     title: 'React',
     issuer: 'HackerRank',
     issueDate: 'Sep 2024',
@@ -31,7 +47,7 @@ export const Certificate = [
   },
   {
     id: 3,
-    logo: 'https://marketplace.canva.com/EAFGv9WhSmc/1/0/1600w/canva-blue-and-yellow-minimalist-employee-of-the-month-certificate-jaIc19nYjY4.jpg',
+    logo: machineLearning2,
     title: 'Machine learning',
     issuer: 'ARDENT COMPUTECH PVT LTD',
     issueDate: 'Sep 2023',
@@ -40,7 +56,7 @@ export const Certificate = [
   },
   {
     id: 4,
-    logo: 'https://marketplace.canva.com/EAFGv9WhSmc/1/0/1600w/canva-blue-and-yellow-minimalist-employee-of-the-month-certificate-jaIc19nYjY4.jpg',
+    logo: hardware2,
     title: 'HARDWARE & NETWORKING',
     issuer: 'ARDENT COMPUTECH PVT LTD',
     issueDate: 'Jan 2023',
@@ -49,16 +65,16 @@ export const Certificate = [
   },
   {
     id: 5,
-    logo: 'https://marketplace.canva.com/EAFGv9WhSmc/1/0/1600w/canva-blue-and-yellow-minimalist-employee-of-the-month-certificate-jaIc19nYjY4.jpg',
-    title: 'INTRODUCTION TO IOT',
-    issuer: 'Simplilearn',
-    issueDate: 'Jan 2023',
-    skills: ['Introduction to IOT'],
-    documentLink: iot
+    logo: diploma2,
+    title: 'Deploma in computer application',
+    issuer: 'National Youth Computer Literacy Drive - India',
+    issueDate: 'Oct 2020',
+    skills: ['Microsoft Office'],
+    documentLink: diploma
   },
   {
     id: 6,
-    logo: 'https://marketplace.canva.com/EAFGv9WhSmc/1/0/1600w/canva-blue-and-yellow-minimalist-employee-of-the-month-certificate-jaIc19nYjY4.jpg',
+    logo: javascript2,
     title: 'Introduction to Programming Using JavaScript',
     issuer: 'Great Learning',
     issueDate: 'Nov 2022',
@@ -67,7 +83,7 @@ export const Certificate = [
   },
   {
     id: 7,
-    logo: 'https://marketplace.canva.com/EAFGv9WhSmc/1/0/1600w/canva-blue-and-yellow-minimalist-employee-of-the-month-certificate-jaIc19nYjY4.jpg',
+    logo: frontend2,
     title: 'HTML FONT END DEVELOPMENT',
     issuer: 'Great Learning',
     issueDate: 'Oct 2022',
@@ -76,25 +92,7 @@ export const Certificate = [
   },
   {
     id: 8,
-    logo: 'https://marketplace.canva.com/EAFGv9WhSmc/1/0/1600w/canva-blue-and-yellow-minimalist-employee-of-the-month-certificate-jaIc19nYjY4.jpg',
-    title: 'Deploma in computer application',
-    issuer: 'National Youth Computer Literacy Drive - India',
-    issueDate: 'Oct 2020',
-    skills: ['Microsoft Office'],
-    documentLink: 'https://example.com/webinar-certificate'
-  },
-  {
-    id: 9,
-    logo: 'https://marketplace.canva.com/EAFGv9WhSmc/1/0/1600w/canva-blue-and-yellow-minimalist-employee-of-the-month-certificate-jaIc19nYjY4.jpg',
-    title: 'EXCEL BEGINNER',
-    issuer: 'Great Learning',
-    issueDate: 'Oct 2021',
-    skills: ['Microsoft Office'],
-    documentLink: excel
-  },
-  {
-    id: 10,
-    logo: 'https://marketplace.canva.com/EAFGv9WhSmc/1/0/1600w/canva-blue-and-yellow-minimalist-employee-of-the-month-certificate-jaIc19nYjY4.jpg',
+    logo: aiemp_webinar2,
     title: 'WEBINAR CERTIFICATE',
     issuer: 'Asansol Institute Of Engineering And Management-Polytechnic',
     issueDate: 'Dec 2021',
@@ -102,8 +100,8 @@ export const Certificate = [
     documentLink: aiemp_webinar
   },
   {
-    id: 11,
-    logo: 'https://marketplace.canva.com/EAFGv9WhSmc/1/0/1600w/canva-blue-and-yellow-minimalist-employee-of-the-month-certificate-jaIc19nYjY4.jpg',
+    id: 9,
+    logo: pythonWebinar2,
     title: 'A one day Introductory Webinar on the Python Library',
     issuer: 'MathTech Thinking Foundation',
     issueDate: 'Dec 2023',
@@ -116,8 +114,35 @@ export const Certificate = [
     documentLink: pythonWebinar
   },
   {
+    id: 10,
+    logo: sql2,
+    title: 'Fundamentals of Database What is SQL?',
+    issuer: 'Simplilearn',
+    issueDate: 'Jun 2024',
+    skills: ['SQL'],
+    documentLink: sql
+  },
+  {
+    id: 11,
+    logo: iot2,
+    title: 'INTRODUCTION TO IOT',
+    issuer: 'Simplilearn',
+    issueDate: 'Jan 2023',
+    skills: ['Introduction to IOT'],
+    documentLink: iot
+  },
+  {
     id: 12,
-    logo: 'https://marketplace.canva.com/EAFGv9WhSmc/1/0/1600w/canva-blue-and-yellow-minimalist-employee-of-the-month-certificate-jaIc19nYjY4.jpg',
+    logo: excel2,
+    title: 'EXCEL BEGINNER',
+    issuer: 'Great Learning',
+    issueDate: 'Oct 2021',
+    skills: ['Microsoft Office'],
+    documentLink: excel
+  },
+  {
+    id: 13,
+    logo: asp2,
     title: 'APS.NET MVC',
     issuer: 'Great Learning',
     issueDate: 'Dec 2023',

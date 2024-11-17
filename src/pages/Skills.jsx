@@ -122,7 +122,7 @@ const Skills = () => {
     <section className='relative w-full'>
       <div className='w-11/12 mx-auto sm:w-10/12'>
         <h1
-          className='mb-8 text-2xl font-bold text-center md:text-3xl'
+          className='mb-2 text-2xl font-bold text-center md:text-3xl'
           data-aos="fade-left"
           data-aos-duration="600"
         >
@@ -135,7 +135,7 @@ const Skills = () => {
         >
           {/* Left side: Linear skill bars */}
           <div className='w-full md:w-1/2'>
-            <ul className='space-y-6'>
+            <ul className='space-y-1'>
               {skillsData.map((skill, index) => (
                 <li
                   key={index}

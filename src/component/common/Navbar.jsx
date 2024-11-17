@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { RiMenu2Fill } from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
 import logo from "../../assets/p image/logo.png"
+import { Link } from 'react-router-dom';
 
 const navlink = [
     { id: 1, title: "Home", path: "/" },
@@ -38,11 +39,13 @@ const Navbar = () => {
             >
                 <div className="flex items-center justify-between w-11/12 h-full mx-auto md:w-10/12">
                     <div className="px-3 py-2 font-semibold">
-                        <img
+                        <Link to="/" className="">
+                         <img
                             src={logo}
                             alt="Logo"
                             className="w-16 h-16 mt-4 rounded-full"
                         />
+                        </Link>
                     </div>
 
                     <div className="hidden sm:flex lg:gap-x-6 md:gap-x-4 gap-x-2">
