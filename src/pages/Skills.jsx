@@ -11,6 +11,7 @@ import {
   FaProjectDiagram,
   FaUserTie
 } from 'react-icons/fa'
+import { SiTailwindcss } from "react-icons/si";
 
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false)
@@ -45,11 +46,7 @@ const Skills = () => {
       name: 'Tailwind CSS',
       level: 88,
       aos: 'fade-right',
-      icon: (
-        <div className='flex items-center justify-center w-10 h-10 text-center text-white bg-blue-500 rounded-full'>
-          T
-        </div>
-      )
+      icon: <SiTailwindcss size={40} className='text-cyan-500' />
     },
     {
       name: 'Python',
@@ -120,30 +117,30 @@ const Skills = () => {
 
   return (
     <section className='relative w-full'>
-      <div className='w-11/12 mx-auto sm:w-10/12'>
+      <div className='w-11/12 mx-auto lg:w-10/12'>
         <h1
-          className='mb-2 text-2xl font-bold text-center md:text-3xl'
+          className='mb-4 text-2xl font-bold text-center md:text-3xl'
           data-aos="fade-left"
           data-aos-duration="600"
         >
           My Skills
         </h1>
         <div
-          className='flex flex-col items-center w-full max-w-6xl gap-16 px-8 mx-auto text-white-100 md:flex-row skills md:gap-24'
+          className='flex flex-col items-center w-full max-w-6xl gap-8 mx-auto lg:gap-16 lg:px-8 text-white-100 xmd:flex-row skills md:gap-24 '
           ref={skillsRef}
           data-aos='fade-up'
         >
           {/* Left side: Linear skill bars */}
-          <div className='w-full md:w-1/2'>
-            <ul className='space-y-1'>
+          <div className='w-[95%] xs:w-[80%] xmd:w-1/2 '>
+            <ul className='flex flex-col gap-y-6 '>
               {skillsData.map((skill, index) => (
                 <li
                   key={index}
                   data-aos={skill.aos}
                   data-aos-delay={index * 100}
-                  className='gap-2'
+                  className='gap-2 '
                 >
-                  <div className='flex p-2 transition-all transform rounded-full shadow-lg duration-600 hover:scale-105 hover:shadow-blue-500'>
+                  <div className='flex p-2 transition-all duration-500 transform rounded-full shadow-lg hover:scale-105 hover:shadow-blue-500'>
                     <div className='flex items-center justify-center w-10 h-10 bg-gray-800 rounded-full text-white-100 sm:w-12 sm:h-12'>
                       {skill.icon}
                     </div>
@@ -151,7 +148,7 @@ const Skills = () => {
                       <h3 className='font-sans text-sm sm:text-base'>
                         {skill.name}
                       </h3>
-                      <div className='h-2 bg-gray-700 border border-gray-800 rounded shadow-lg w-[16rem] sm:w-[20rem]'>
+                      <div className='h-2 mt-2 bg-gray-700 border border-gray-800 rounded shadow-lg w-[13rem] xxs:w-[15rem] xsm:w-[18rem] sm:w-[24rem] smd:w-[30rem] xmd:w-[16rem] xl:w-[20rem]'>
                         <div
                           className='h-full bg-blue-500'
                           style={{
@@ -169,20 +166,20 @@ const Skills = () => {
 
           {/* Right side: Circular progress bars */}
           <div
-            className='w-full md:w-1/2'
+            className='w-[95%] xs:w-[80%] xmd:w-1/2 '
             data-aos='fade-up'
             data-aos-delay='500'
           >
-            <div className='grid grid-cols-2 gap-8 sm:grid-cols-3'>
+            <div className='grid grid-cols-2 gap-8 xs:grid-cols-3 xmd:grid-cols-2 xl:grid-cols-3 '>
               {softSkillsData.map((softSkill, index) => (
                 <div
                   key={index}
-                  className='relative flex flex-col items-center'
+                  className='relative flex flex-col items-center '
                   data-aos='zoom-in-up'
                   data-aos-delay={index * 100}
                 >
-                  <div className='p-4 transition-all transform rounded-lg shadow-lg duration-600 hover:scale-105 hover:shadow-blue-500'>
-                    <div className='relative flex items-center justify-center w-20 h-20 md:w-24 md:h-24'>
+                  <div className='p-4 flex flex-col items-center h-[160px] xmd:h-[170px] w-[120px] mmd:w-[150px] xl:w-auto  transition-all transform rounded-lg shadow-lg duration-500 hover:scale-105 hover:shadow-blue-500'>
+                    <div className='relative flex items-center justify-center w-20 h-20 mmd:w-24 mmd:h-24'>
                       <svg
                         width='100%'
                         height='100%'
