@@ -1,7 +1,7 @@
 import React from 'react'
 import Projects from './Projects'
 import Certificate from './Certificate'
-import HeroSection from './Herosection'
+import HeroSection from './HeroSection'
 import AboutSummary from './AboutSummary'
 import Skills from './Skills'
 
