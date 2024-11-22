@@ -44,6 +44,7 @@ const HeroSection = () => {
                 <div className="flex-1 text-center lg:text-left" data-aos="fade-up" data-aos-delay="200">
                     <h4 className="text-lg sm:text-2xl">
                     Hey there, I'm  {' '}
+                     {/* //// */}
                         <span className="font-serif font-semibold text-rose-400 sm:text-2xl">Ashique Hussain Ansari</span>
                     </h4>
                     <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl">
