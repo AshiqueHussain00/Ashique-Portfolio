@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { RiMenu2Fill } from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
 import logo from "../../assets/p image/logo.png"
@@ -34,7 +34,7 @@ const Navbar = () => {
     return (
         <>
             <nav
-                className={`w-full fixed top-0 font-semibold left-0 z-50 transition-all duration-300 ${scrolled ? "bg-white/10 backdrop-blur-md shadow-lg" : "bg-transparent"} text-white-100`}
+                className={`w-full fixed top-0 font-semibold left-0 z-[9999] transition-all duration-300 ${scrolled ? "bg-white/10 backdrop-blur-md shadow-lg" : "bg-transparent"} text-white-100`}
                 style={{ height: '72px' }}
             >
                 <div className="flex items-center justify-between w-11/12 h-full mx-auto md:w-10/12">

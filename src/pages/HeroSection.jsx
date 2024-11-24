@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaEye, FaGithub } from 'react-icons/fa';
-import Ashique from '../assets/p image/Ashique.jpg';
+import Ashique from '../assets/p image/Ashique.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
 
@@ -39,13 +39,15 @@ const HeroSection = () => {
     }, [charIndex, isDeleting, roleIndex]);
 
     return (
-        <section className="relative w-full px-4 py-14 text-white-100 lg:px-0">
+        <section className="relative w-full px-4 text-white bg-black py-14 lg:px-0 z-1">
             <div className="flex flex-col items-center gap-8 mx-auto max-w-7xl lg:flex-row lg:gap-16">
+                {/* Left Side: Text Content */}
                 <div className="flex-1 text-center lg:text-left" data-aos="fade-up" data-aos-delay="200">
                     <h4 className="text-lg sm:text-2xl">
-                    Hey there, I'm  {' '}
-                     {/* //// */}
-                        <span className="font-serif font-semibold text-rose-400 sm:text-2xl">Ashique Hussain Ansari</span>
+                        Hey there, I'm{' '}
+                        <span className="font-serif font-semibold text-rose-400 sm:text-2xl">
+                            Ashique Hussain Ansari
+                        </span>
                     </h4>
                     <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl">
                         I'm{' '}
@@ -54,14 +56,22 @@ const HeroSection = () => {
                             <span className="animate-blink">|</span>
                         </span>
                     </h1>
-                    <p className="max-w-2xl mx-auto mt-4 text-base sm:text-lg lg:mx-0" data-aos="fade-up" data-aos-delay="400">
-                        Experienced full-stack developer with 2+ years of hands-on experience in React, Tailwind CSS, and related technologies. Proficient in front-end and back-end development, with a strong foundation in building responsive, scalable applications.
+                    <p
+                        className="max-w-2xl mx-auto mt-4 text-base text-gray-300 sm:text-lg lg:mx-0"
+                        data-aos="fade-up"
+                        data-aos-delay="400"
+                    >
+                        Experienced full-stack developer with 2+ years of hands-on experience in React, Tailwind CSS, and
+                        related technologies. Proficient in front-end and back-end development, with a strong foundation in
+                        building responsive, scalable applications.
                     </p>
+                    {/* Buttons */}
                     <div className="flex justify-center gap-4 mt-6 lg:justify-start">
                         <Link
                             to="#"
                             className="inline-flex items-center px-4 py-2 text-sm font-medium text-white transition-all duration-300 transform rounded-lg shadow-lg bg-gradient-to-r from-blue-500 to-purple-500 hover:shadow-2xl hover:scale-105 hover:rotate-1 focus:outline-none focus:ring-4 focus:ring-blue-300"
-                            data-aos="fade-up" data-aos-delay="600"
+                            data-aos="fade-up"
+                            data-aos-delay="600"
                         >
                             View Resume
                             <FaEye className="ml-2" />
@@ -69,16 +79,22 @@ const HeroSection = () => {
                         <Link
                             to="#"
                             className="inline-flex items-center px-6 py-2 text-sm font-medium text-white transition-all duration-300 transform rounded-lg shadow-lg bg-gradient-to-r from-green-500 to-teal-500 hover:shadow-2xl hover:scale-105 hover:-rotate-1 focus:outline-none focus:ring-4 focus:ring-green-300"
-                            data-aos="fade-up" data-aos-delay="800"
+                            data-aos="fade-up"
+                            data-aos-delay="800"
                         >
                             View GitHub Profile
                             <FaGithub className="ml-2" />
                         </Link>
                     </div>
                 </div>
-                <div className="relative flex-shrink-0 max-w-xs mt-8 sm:max-w-sm lg:max-w-md lg:mt-0" data-aos="zoom-in" data-aos-delay="400">
+                {/* Right Side: Image */}
+                <div
+                    className="relative flex-shrink-0 w-full lg:w-[25%] max-w-xs sm:max-w-sm lg:max-w-none mt-2 lg:mt-0 z-[1]"
+                    data-aos="zoom-in"
+                    data-aos-delay="400"
+                >
                     <img
-                        className="rounded-tl-[3rem] rounded-br-[3rem] w-full h-[60vh] border-4 border-purple-500 shadow-xl transform transition-transform duration-500 hover:scale-105"
+                        className="w-full h-auto rounded-full drop-shadow-[0_8px_20px_rgba(255,255,255,0.3)] shadow-xl transform transition-transform duration-500 hover:scale-105 object-cover"
                         src={Ashique}
                         alt="My Pic"
                     />
