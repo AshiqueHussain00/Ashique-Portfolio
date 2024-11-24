@@ -19,9 +19,10 @@ const Certificate = lazy(() => import('./pages/Certificate'));
 function App() {
   return (
     <div>
-      <Navbar />
+      
       {/* Use Suspense to wrap lazy-loaded components */}
       <Suspense fallback={<Loader />}>
+      <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />

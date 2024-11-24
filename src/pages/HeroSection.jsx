@@ -39,8 +39,8 @@ const HeroSection = () => {
     }, [charIndex, isDeleting, roleIndex]);
 
     return (
-        <section className="relative w-full px-4 text-white bg-black py-14 lg:px-0 z-1">
-            <div className="flex flex-col items-center gap-8 mx-auto max-w-7xl lg:flex-row lg:gap-16">
+        <section className="relative w-full px-4 text-white-100 py-14 lg:px-0 z-1">
+            <div className="flex flex-col items-center max-w-6xl gap-8 mx-auto lg:flex-row lg:gap-16">
                 {/* Left Side: Text Content */}
                 <div className="flex-1 text-center lg:text-left" data-aos="fade-up" data-aos-delay="200">
                     <h4 className="text-lg sm:text-2xl">
