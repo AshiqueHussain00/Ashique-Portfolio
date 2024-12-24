@@ -1,101 +1,76 @@
-import { FaGlobe, FaEnvelope, FaPhoneAlt, FaBriefcase } from "react-icons/fa";
+import React from "react";
 import { motion } from "framer-motion";
+import { FaGlobe, FaEnvelope, FaPhone, FaUserCheck } from "react-icons/fa";
+import about from "../assets/p image/about.gif";
 
 const AboutSummary = () => {
-    const fadeInLeft = {
-        hidden: { opacity: 0, x: -50 },
-        visible: { opacity: 1, x: 0 },
-    };
-
-    const fadeInRight = {
-        hidden: { opacity: 0, x: 50 },
-        visible: { opacity: 1, x: 0 },
-    };
-
-    const fadeInUp = {
-        hidden: { opacity: 0, y: 50 },
-        visible: { opacity: 1, y: 0 },
-    };
-
     return (
-        <section className="w-full py-12 -z-10">
-            <motion.h1
-                className="mb-4 text-4xl font-bold tracking-wide text-center"
-                initial="hidden"
-                whileInView="visible"
-                variants={fadeInUp}
-                transition={{ duration: 0.6 }}
+        <div className="px-6 py-12 text-white-100 sm:px-12 md:px-20 lg:px-32">
+            <motion.div
+                className="flex flex-col items-center justify-between gap-8 mx-auto max-w-7xl md:flex-row"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
             >
-                ABOUT
-            </motion.h1>
-            <div className="flex flex-col items-center w-10/12 mx-auto lg:flex-row lg:gap-10">
-                {/* Image */}
+                {/* Image Section */}
                 <motion.div
-                    className="w-full mb-6 lg:w-4/12 lg:mb-0"
-                    initial="hidden"
-                    whileInView="visible"
-                    variants={fadeInLeft}
-                    transition={{ duration: 0.6 }}
+                    className="flex justify-center w-full md:w-1/3"
+                    initial={{ scale: 0.8 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 1.2 }}
                 >
                     <img
-                        src="https://miro.medium.com/v2/resize:fit:1400/1*IRFhWNqusUWbTsB1hQXhrQ.gif"
-                        alt="Profile"
-                        className="w-full h-auto rounded-lg shadow-xl"
+                        src={about}
+                        alt="Developer working"
+                        className="rounded-lg shadow-lg"
                     />
                 </motion.div>
 
-                {/* About Content */}
+                {/* Text Section */}
                 <motion.div
-                    className="w-full lg:w-9/12"
-                    initial="hidden"
-                    whileInView="visible"
-                    variants={fadeInRight}
-                    transition={{ duration: 0.6 }}
+                    className="w-full text-center md:w-2/3 md:text-left"
+                    initial={{ x: 100, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 1 }}
                 >
-                    <p className="mb-6 text-lg text-center lg:text-justify">
-                        Diploma in Computer Science with expertise in modern web development technologies. Skilled in creating responsive, scalable applications and eager to collaborate on innovative projects.
+                    <h1 className="mb-4 text-3xl font-bold">ABOUT</h1>
+
+                    <p className="mb-6 text-lg leading-relaxed">
+                        Diploma in Computer Science with expertise in modern web development
+                        technologies. Skilled in creating responsive, scalable applications
+                        and eager to collaborate on innovative projects.
                     </p>
 
-                    {/* Contact Information */}
-                    <div className="flex flex-wrap gap-6">
-                        {[{
-                            icon: <FaGlobe className="text-gray-600" />,
-                            label: "Website",
-                            value: "www.example.com"
-                        },
-                        {
-                            icon: <FaEnvelope className="text-gray-600" />,
-                            label: "Email",
-                            value: "ansariazad7864@gmail.com"
-                        },
-                        {
-                            icon: <FaPhoneAlt className="text-gray-600" />,
-                            label: "Phone",
-                            value: "+91-9547694261"
-                        },
-                        {
-                            icon: <FaBriefcase className="text-gray-600" />,
-                            label: "Freelance",
-                            value: "Available"
-                        }].map((item, index) => (
-                            <motion.div
-                                key={index}
-                                className="flex items-center gap-3"
-                                initial="hidden"
-                                whileInView="visible"
-                                variants={fadeInUp}
-                                transition={{ duration: 0.8, delay: index * 0.2 }}
-                            >
-                                {item.icon}
-                                <p>
-                                    <span className="font-bold">{item.label}:</span> {item.value}
-                                </p>
-                            </motion.div>
-                        ))}
+                    {/* Responsive Contact Section */}
+                    <div className="flex flex-col justify-center gap-6 sm:flex-row sm:flex-wrap md:justify-start">
+                        <p className="flex items-center gap-2">
+                            <FaGlobe className="text-blue-500" />
+                            <span>
+                                <strong>Website:</strong> www.example.com
+                            </span>
+                        </p>
+                        <p className="flex items-center gap-2">
+                            <FaEnvelope className="text-red-500" />
+                            <span>
+                                <strong>Email:</strong> ansariazad7864@gmail.com
+                            </span>
+                        </p>
+                        <p className="flex items-center gap-2">
+                            <FaPhone className="text-green-500" />
+                            <span>
+                                <strong>Phone:</strong> +91-9547694261
+                            </span>
+                        </p>
+                        <p className="flex items-center gap-2">
+                            <FaUserCheck className="text-yellow-500" />
+                            <span>
+                                <strong>Freelance:</strong> Available
+                            </span>
+                        </p>
                     </div>
                 </motion.div>
-            </div>
-        </section>
+            </motion.div>
+        </div>
     );
 };
 

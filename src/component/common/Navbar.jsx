@@ -59,7 +59,7 @@ const Navbar = () => {
     };
 
     return (
-        <>
+        <section className="relative">
             <nav
                 className={`w-full fixed top-0 font-semibold left-0 z-[9999] transition-all duration-300 ${
                     scrolled ? "bg-white/10 backdrop-blur-md shadow-lg" : "bg-transparent"
@@ -147,7 +147,7 @@ const Navbar = () => {
             <div className="pt-[72px]">
                 {/* Your main content here */}
             </div>
-        </>
+        </section>
     );
 };
 

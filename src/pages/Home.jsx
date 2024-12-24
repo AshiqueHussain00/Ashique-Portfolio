@@ -11,12 +11,11 @@ function Home() {
         <HeroSection/>
         <AboutSummary/>     
         <Skills/>
-        <div>
+       
         <Projects limit={4} />
-        </div>
-        <div>
+        
         <Certificate limit={4} />
-        </div>
+       
     </div>
   )
 }
