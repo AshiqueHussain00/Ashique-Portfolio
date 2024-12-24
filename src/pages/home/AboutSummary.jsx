@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaGlobe, FaEnvelope, FaPhone, FaUserCheck } from "react-icons/fa";
-import about from "../assets/p image/about.gif";
+import about from "../../assets/p image/about.gif";
 
 const AboutSummary = () => {
     return (

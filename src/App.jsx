@@ -6,6 +6,7 @@ import Loader from './component/common/Loader';
 import 'aos/dist/aos.css'; // Import AOS styles
 import AOS from 'aos';
 import Navbar from './component/common/Navbar';
+import Footer from './component/common/Footer';
 
 AOS.init(); // Initialize AOS
 
@@ -32,6 +33,7 @@ function App() {
           <Route path="/certificate" element={<Certificate />} />
 
         </Routes>
+        <Footer/>
       </Suspense>
     </div>
   );

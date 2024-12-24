@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaEye, FaGithub } from 'react-icons/fa';
-import Ashique from '../assets/p image/Ashique.png';
+import Ashique from '../../assets/p image/Ashique.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
 
