@@ -16,7 +16,7 @@ function Projects({ limit }) {
     const limitedCardData = cardData.slice(0, limit);
 
     return (
-        <section className="relative w-full -z-10">
+        <section className="relative w-full ">
             <div className="w-10/12 mx-auto mt-10 mb-10">
                 <motion.h1
                     className="mb-10 text-3xl font-bold text-center"
@@ -66,8 +66,8 @@ function Projects({ limit }) {
                                 description={data.description}
                                 technologies={data.technologies}
                                 image={data.image}
-                                link1={data.link}
-                                link2={data.link2}
+                                vie={data.link1}
+                                git={data.link2}
                                 buttonText1={data.buttonText1}
                                 buttonText2={data.buttonText2}
                             />

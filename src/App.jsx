@@ -21,7 +21,7 @@ function App() {
   return (
     <div>
         <Navbar className="z-50"/>
-        
+    
       {/* Use Suspense to wrap lazy-loaded components */}
       <Suspense fallback={<Loader />}>
     

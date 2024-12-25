@@ -19,22 +19,22 @@ const CertificatePage = ({ limit }) => {
   const limitedCertificates = Certificate.slice(0, limit)
 
   return (
-    <section className='relative w-full -z-10'>
+    <section className='relative w-full'>
       <div className='w-9/12 mx-auto mt-10 mb-10'>
         {/* Applying Framer Motion to the heading */}
         <motion.h1
-                    className="mb-10 text-3xl font-bold text-center"
-                    variants={headingVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    transition={{
-                        duration: 0.3, // Adjust duration as needed
-                        delay: 0.1, // Delay before starting the animation
-                    }}
-                    viewport={{ once: true, amount: 0.2 }} // Trigger animation when 20% of the heading is in view
-                >
-                    My Certificate
-                </motion.h1>
+          className="mb-10 text-3xl font-bold text-center"
+          variants={headingVariants}
+          initial="hidden"
+          whileInView="visible"
+          transition={{
+            duration: 0.3, // Adjust duration as needed
+            delay: 0.1, // Delay before starting the animation
+          }}
+          viewport={{ once: true, amount: 0.2 }} // Trigger animation when 20% of the heading is in view
+        >
+          My Certificate
+        </motion.h1>
 
         <motion.div
           className="mb-10 text-justify lg:text-center"
