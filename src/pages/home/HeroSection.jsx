@@ -77,7 +77,7 @@ const HeroSection = () => {
                             <FaEye className="ml-2" />
                         </Link>
                         <Link
-                            to="#"
+                            to="https://github.com/AshiqueHussain00"
                             className="inline-flex items-center px-6 py-2 text-sm font-medium text-white transition-all duration-300 transform rounded-lg shadow-lg bg-gradient-to-r from-green-500 to-teal-500 hover:shadow-2xl hover:scale-105 hover:-rotate-1 focus:outline-none focus:ring-4 focus:ring-green-300"
                             data-aos="fade-up"
                             data-aos-delay="800"
