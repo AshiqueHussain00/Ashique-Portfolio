@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaEye, FaGithub } from 'react-icons/fa';
 import Ashique from '../../assets/p image/Ashique.png';
+import resume from '../../assets/resume/Ashique Hussain Ansari_Resume.pdf'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
 
@@ -68,8 +69,7 @@ const HeroSection = () => {
                     {/* Buttons */}
                     <div className="flex justify-center gap-4 mt-6 lg:justify-start">
                         <Link
-                            to="https://drive.google.com/file/d/1D4XQYZFV66ZYbgq8Xk5KfIf8h3HaCqms/view?usp=sharing"
-                            className="inline-flex items-center px-4 py-2 text-sm font-medium text-white transition-all duration-300 transform rounded-lg shadow-lg bg-gradient-to-r from-blue-500 to-purple-500 hover:shadow-2xl hover:scale-105 hover:rotate-1 focus:outline-none focus:ring-4 focus:ring-blue-300"
+                            to={resume}                            className="inline-flex items-center px-4 py-2 text-sm font-medium text-white transition-all duration-300 transform rounded-lg shadow-lg bg-gradient-to-r from-blue-500 to-purple-500 hover:shadow-2xl hover:scale-105 hover:rotate-1 focus:outline-none focus:ring-4 focus:ring-blue-300"
                             data-aos="fade-up"
                             data-aos-delay="600"
                         >
