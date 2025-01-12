@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaEye, FaGithub } from 'react-icons/fa';
 import Ashique from '../../assets/p image/Ashique.png';
-import resume from '../../assets/resume/Ashique Hussain Ansari_Resume.pdf'
+import resume from '../../assets/resume/Ashique Hussain Ansari_Resume.pdf'; // Import the resume file
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
 
 const HeroSection = () => {
-    const roles = ['FullStack Developer', 'Frontend Developer', 'Backend Developer'];
+    const roles = ['Frontend Developer','React Developer'];
     const [roleIndex, setRoleIndex] = useState(0);
     const [currentText, setCurrentText] = useState('');
     const [isDeleting, setIsDeleting] = useState(false);
@@ -68,14 +68,17 @@ const HeroSection = () => {
                     </p>
                     {/* Buttons */}
                     <div className="flex justify-center gap-4 mt-6 lg:justify-start">
-                        <Link
-                            to={resume}                            className="inline-flex items-center px-4 py-2 text-sm font-medium text-white transition-all duration-300 transform rounded-lg shadow-lg bg-gradient-to-r from-blue-500 to-purple-500 hover:shadow-2xl hover:scale-105 hover:rotate-1 focus:outline-none focus:ring-4 focus:ring-blue-300"
+                        <a
+                            href={resume}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center px-4 py-2 text-sm font-medium text-white transition-all duration-300 transform rounded-lg shadow-lg bg-gradient-to-r from-blue-500 to-purple-500 hover:shadow-2xl hover:scale-105 hover:rotate-1 focus:outline-none focus:ring-4 focus:ring-blue-300"
                             data-aos="fade-up"
                             data-aos-delay="600"
                         >
                             View Resume
                             <FaEye className="ml-2" />
-                        </Link>
+                        </a>
                         <Link
                             to="https://github.com/AshiqueHussain00"
                             className="inline-flex items-center px-6 py-2 text-sm font-medium text-white transition-all duration-300 transform rounded-lg shadow-lg bg-gradient-to-r from-green-500 to-teal-500 hover:shadow-2xl hover:scale-105 hover:-rotate-1 focus:outline-none focus:ring-4 focus:ring-green-300"
