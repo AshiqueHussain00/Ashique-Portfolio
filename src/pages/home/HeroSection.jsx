@@ -68,8 +68,8 @@ const HeroSection = () => {
                     </p>
                     {/* Buttons */}
                     <div className="flex justify-center gap-4 mt-6 lg:justify-start">
-                        <a
-                            href={resume}
+                        <Link
+                            to={resume}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center px-4 py-2 text-sm font-medium text-white transition-all duration-300 transform rounded-lg shadow-lg bg-gradient-to-r from-blue-500 to-purple-500 hover:shadow-2xl hover:scale-105 hover:rotate-1 focus:outline-none focus:ring-4 focus:ring-blue-300"
@@ -78,7 +78,7 @@ const HeroSection = () => {
                         >
                             View Resume
                             <FaEye className="ml-2" />
-                        </a>
+                        </Link>
                         <Link
                             to="https://github.com/AshiqueHussain00"
                             className="inline-flex items-center px-6 py-2 text-sm font-medium text-white transition-all duration-300 transform rounded-lg shadow-lg bg-gradient-to-r from-green-500 to-teal-500 hover:shadow-2xl hover:scale-105 hover:-rotate-1 focus:outline-none focus:ring-4 focus:ring-green-300"
