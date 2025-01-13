@@ -98,7 +98,7 @@ const HeroSection = () => {
                     data-aos-delay="400"
                 >
                     <img
-                        className="w-48 sm:w-48 md:w-52 lg:w-full h-auto rounded-full drop-shadow-[0_8px_20px_rgba(255,255,255,0.3)] shadow-xl transform transition-transform duration-500 hover:scale-105 object-cover"
+                        className="w-52 sm:w-48 md:w-52 lg:w-full h-auto rounded-full drop-shadow-[0_8px_20px_rgba(255,255,255,0.3)] shadow-xl transform transition-transform duration-500 hover:scale-105 object-cover"
                         src={Ashique}
                         alt="My Pic"
                     />
