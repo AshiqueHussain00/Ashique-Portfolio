@@ -7,13 +7,13 @@ const CertificatePage = ({ limit }) => {
   const cardVariants = {
     hidden: { opacity: 0, y: 50 }, // Initial state (hidden)
     visible: { opacity: 1, y: 0 } // Final state (visible)
-  }
+  };
 
   // Heading animation variants
   const headingVariants = {
-    hidden: { opacity: 0, y: 20 }, // Initial state for the heading
+    hidden: { opacity: 0, y: 30 }, // Initial state for the heading
     visible: { opacity: 1, y: 0 } // Final state for the heading
-  }
+  };
 
   // Slice the Certificate array to display only the first 'limit' certificates
   const limitedCertificates = Certificate.slice(0, limit)

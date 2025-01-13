@@ -91,17 +91,19 @@ const HeroSection = () => {
                     </div>
                 </div>
                 {/* Right Side: Image */}
-                <div
-                    className="relative flex-shrink-0 w-full lg:w-[25%] max-w-xs sm:max-w-sm lg:max-w-none mt-2 lg:mt-0 z-[1]"
-                    data-aos="zoom-in"
-                    data-aos-delay="400"
-                >
-                    <img
-                        className="w-full h-auto rounded-full drop-shadow-[0_8px_20px_rgba(255,255,255,0.3)] shadow-xl transform transition-transform duration-500 hover:scale-105 object-cover"
-                        src={Ashique}
-                        alt="My Pic"
-                    />
-                </div>
+              {/* Right Side: Image */}
+<div
+    className="relative flex-shrink-0 w-full max-w-xs sm:max-w-sm lg:w-[25%] lg:max-w-none mt-6 lg:mt-0 z-[1] flex justify-center"
+    data-aos="zoom-in"
+    data-aos-delay="400"
+>
+    <img
+        className="w-40 sm:w-48 md:w-52 lg:w-full h-auto rounded-full drop-shadow-[0_8px_20px_rgba(255,255,255,0.3)] shadow-xl transform transition-transform duration-500 hover:scale-105 object-cover"
+        src={Ashique}
+        alt="My Pic"
+    />
+</div>
+
             </div>
         </section>
     );

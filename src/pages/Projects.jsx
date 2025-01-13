@@ -8,6 +8,7 @@ function Projects({ limit }) {
         hidden: { opacity: 0, y: 50 }, // Initial state (hidden)
         visible: { opacity: 1, y: 0 }, // Final state (visible)
     };
+    
     const headingVariants = {
         hidden: { opacity: 0, y: 30 }, // Initial state for the heading
         visible: { opacity: 1, y: 0 }, // Final state for the heading
