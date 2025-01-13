@@ -47,8 +47,8 @@ const AboutSummary = () => {
                         <p className="flex items-center gap-2">
                             <FaGlobe className="text-blue-500" />
                             <span>
-                                <strong>Website:</strong>
-                                <Link to="ashique-portfolio.vercel.app" className=" hover:underline">
+                                <strong>Website: </strong>
+                                <Link to="https://ashique-portfolio.vercel.app/"  className=" hover:underline">
                                     ashique-portfolio.vercel.app
                                 </Link>
                             </span>
