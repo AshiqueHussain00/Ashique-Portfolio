@@ -46,7 +46,7 @@ const AboutSummary = () => {
                         <p className="flex items-center gap-2">
                             <FaGlobe className="text-blue-500" />
                             <span>
-                                <strong>Website:</strong> www.example.com
+                                <strong>Website:</strong> https://ashique-portfolio.vercel.app/
                             </span>
                         </p>
                         <p className="flex items-center gap-2">
