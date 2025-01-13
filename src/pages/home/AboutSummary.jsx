@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { FaGlobe, FaEnvelope, FaPhone, FaUserCheck } from "react-icons/fa";
 import about from "../../assets/p image/about.gif";
 import { Link } from "react-router-dom";
-import contact from '../Contact'
 
 const AboutSummary = () => {
     return (
@@ -59,7 +58,7 @@ const AboutSummary = () => {
                             <span>
                                 <strong>Email: </strong>
                                 <Link
-                                    to={contact}
+                                    to="/contact"
                                     className=" hover:underline"
                                 >
                                     ansariazad7864@gmail.com
