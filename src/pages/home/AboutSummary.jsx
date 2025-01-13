@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaGlobe, FaEnvelope, FaPhone, FaUserCheck } from "react-icons/fa";
 import about from "../../assets/p image/about.gif";
+import { Link } from "react-router-dom";
 
 const AboutSummary = () => {
     return (
@@ -46,13 +47,23 @@ const AboutSummary = () => {
                         <p className="flex items-center gap-2">
                             <FaGlobe className="text-blue-500" />
                             <span>
-                                <strong>Website:</strong> https://ashique-portfolio.vercel.app/
+                                <strong>Website:</strong>
+                                <Link to="ashique-portfolio.vercel.app" className=" hover:underline">
+                                    ashique-portfolio.vercel.app
+                                </Link>
                             </span>
                         </p>
                         <p className="flex items-center gap-2">
                             <FaEnvelope className="text-red-500" />
                             <span>
-                                <strong>Email:</strong> ansariazad7864@gmail.com
+                                <strong>Email: </strong>
+                                <Link
+                                    to="../Contact.jsx"
+                                    className=" hover:underline"
+                                >
+                                    ansariazad7864@gmail.com
+                                </Link>
+
                             </span>
                         </p>
                         <p className="flex items-center gap-2">

@@ -1,5 +1,6 @@
 // src/About.jsx
-import Ashique from '../assets/p image/Ashique.jpg';
+import Ashique from '../assets/p image/Ashique.png';
+import { Link } from "react-router-dom";
 import { FaBirthdayCake, FaGlobe, FaPhoneAlt, FaMapMarkerAlt, FaEnvelope, FaUserGraduate, FaBriefcase } from "react-icons/fa";
 
 const About = () => {
@@ -18,11 +19,11 @@ const About = () => {
                 {/* Main content: Image and Details */}
                 <div className="flex flex-col items-center justify-between gap-12 lg:flex-row lg:gap-20">
                     {/* Left side (Image) */}
-                    <div className="flex-shrink-0 w-full lg:w-3/12" data-aos="fade-left" data-aos-duration="600">
+                    <div className="relative flex-shrink-0 w-full max-w-xs sm:max-w-sm lg:w-[25%] lg:max-w-none mt-6 lg:mt-0 z-[1] flex justify-center" data-aos="fade-left" data-aos-duration="600">
                         <img
                             src={Ashique}
                             alt="Profile"
-                            className="w-full h-[60vh] object-cover rounded-tl-[5rem] rounded-br-[5rem] border-8 border-solid border-transparent bg-gradient-to-br  shadow-xl transform transition-all duration-500 hover:scale-105 hover:rotate-2 hover:shadow-2xl"
+                           className="w-52 sm:w-48 md:w-52 lg:w-full h-auto rounded-full drop-shadow-[0_8px_20px_rgba(255,255,255,0.3)] shadow-xl transform transition-transform duration-500 hover:scale-105 object-cover"
                         />
                     </div>
                     {/* Right side (Text Content) */}
@@ -38,16 +39,40 @@ const About = () => {
                             {[
                                 { icon: <FaBirthdayCake className="text-gray-500" />, label: "Birthday", value: "25 July 2003" },
                                 { icon: <FaUserGraduate className="text-gray-500" />, label: "Age", value: "21" },
-                                { icon: <FaGlobe className="text-gray-500" />, label: "Website", value: "www.example.com" },
+                                {
+                                    icon: <FaGlobe className="text-gray-500" />,
+                                    label: "Website",
+                                    value: (
+                                        <Link
+                                            to="https://ashique-portfolio.vercel.app/"
+                                            className=" hover:underline"
+                                        >
+                                            ashique-portfolio.vercel.app
+                                        </Link>
+                                    )
+                                },
                                 { icon: <FaBriefcase className="text-gray-500" />, label: "Degree", value: "Diploma in Computer Science" },
                                 { icon: <FaPhoneAlt className="text-gray-500" />, label: "Phone", value: "+91-9547694261" },
-                                { icon: <FaEnvelope className="text-gray-500" />, label: "Email", value: "ansariazad7864@gmail.com" },
+                                {
+                                    icon: <FaEnvelope className="text-gray-500" />,
+                                    label: "Email",
+                                    value: (
+                                        <Link
+                                            to="/contact"
+                                            className=" hover:underline"
+                                        >
+                                            ansariazad7864@gmail.com
+                                        </Link>
+                                    )
+                                },
                                 { icon: <FaMapMarkerAlt className="text-gray-500" />, label: "City", value: "Asansol, West Bengal, India" },
                                 { icon: <FaBriefcase className="text-gray-500" />, label: "Freelance", value: "Available" }
                             ].map((info, index) => (
                                 <div key={index} className="flex items-center gap-4 " data-aos="fade-up" data-aos-duration="800">
                                     {info.icon}
-                                    <p><span className="font-semibold">{info.label}:</span> {info.value}</p>
+                                    <p>
+                                        <span className="font-semibold">{info.label}:</span> {info.value}
+                                    </p>
                                 </div>
                             ))}
                         </div>
