@@ -49,7 +49,7 @@ const AboutSummary = () => {
                             <span>
                                 <strong>Website: </strong>
                                 <Link to="https://www.ashique-portfolio.tech/"  className=" hover:underline">
-                                    ashique-portfolio.technologies
+                                    ashique-portfolio.tech
                                 </Link>
                             </span>
                         </p>
