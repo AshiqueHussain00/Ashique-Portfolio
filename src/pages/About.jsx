@@ -44,7 +44,7 @@ const About = () => {
                                     label: "Website",
                                     value: (
                                         <Link
-                                            to="https://ashique-portfolio.vercel.app/"
+                                            to="https://www.ashique-portfolio.tech/"
                                             className=" hover:underline"
                                         >
                                             ashique-portfolio.vercel.app
