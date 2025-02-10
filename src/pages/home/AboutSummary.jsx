@@ -48,7 +48,7 @@ const AboutSummary = () => {
                             <FaGlobe className="text-blue-500" />
                             <span>
                                 <strong>Website: </strong>
-                                <Link to="https://ashique-portfolio.vercel.app/"  className=" hover:underline">
+                                <Link to="https://www.ashique-portfolio.tech/"  className=" hover:underline">
                                     ashique-portfolio.vercel.app
                                 </Link>
                             </span>
