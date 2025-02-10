@@ -49,7 +49,7 @@ const AboutSummary = () => {
                             <span>
                                 <strong>Website: </strong>
                                 <Link to="https://www.ashique-portfolio.tech/"  className=" hover:underline">
-                                    ashique-portfolio.vercel.app
+                                    ashique-portfolio.technologies
                                 </Link>
                             </span>
                         </p>

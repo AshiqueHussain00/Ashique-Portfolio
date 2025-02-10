@@ -47,7 +47,7 @@ const About = () => {
                                             to="https://www.ashique-portfolio.tech/"
                                             className=" hover:underline"
                                         >
-                                            ashique-portfolio.vercel.app
+                                            ashique-portfolio.tech
                                         </Link>
                                     )
                                 },
