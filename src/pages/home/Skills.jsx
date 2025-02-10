@@ -77,7 +77,7 @@ const Skills = () => {
     },
     {
       name: "Teamwork",
-      level: 75,
+      level: 95,
       icon: <FaUserTie size={40} className="text-teal-700" />,
     },
     {
