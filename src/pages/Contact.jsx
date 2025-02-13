@@ -58,7 +58,7 @@ function Contact() {
                 transition={{ duration: 0.7 }}
                 className="mt-4 mb-2 text-3xl font-bold text-center text-blue-600"
             >
-                Contact us
+                Contact me
             </motion.h2>
 
             {/* Decorative circles */}
