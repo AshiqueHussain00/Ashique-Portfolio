@@ -37,7 +37,7 @@ const AboutSummary = () => {
                     <h1 className="mb-4 text-3xl font-bold">ABOUT</h1>
 
                     <p className="mb-6 text-lg leading-relaxed">
-                        Diploma in Computer Science with expertise in modern web development
+                        I am Diploma in Computer Science with expertise in modern web development
                         technologies. Skilled in creating responsive, scalable applications
                         and eager to collaborate on innovative projects.
                     </p>
