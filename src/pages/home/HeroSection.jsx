@@ -63,7 +63,7 @@ const HeroSection = () => {
                         data-aos-delay="400"
                     >
                         Experienced full-stack developer with 2+ years of hands-on experience in React, Tailwind CSS, and
-                        related technologies. Proficient in front-end and back-end development, with a strong foundation in
+                        related technologies. Proficient in front-end and basic knowledge in back-end development, with a strong foundation in
                         building responsive, scalable applications.
                     </p>
                     {/* Buttons */}
