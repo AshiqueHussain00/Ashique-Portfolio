@@ -16,15 +16,15 @@ const CertificateCard = ({ logo, title, issuer, issueDate, skills, documentLink 
         Skills: {skills.length > 0 ? skills.join(', ') : 'No skills listed'}
       </p>
       <div className="flex justify-center mt-4 mb-4">
-        <Link
-          to={documentLink}
+        <a
+          href={documentLink}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center px-6 py-2 text-sm font-medium transition-transform duration-300 transform rounded-lg shadow-lg text-white-100 bg-gradient-to-r from-blue-500 to-purple-500 hover:shadow-2xl hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300"
         >
           View Document
           <FaEye className="ml-2" />
-        </Link>
+        </a>
       </div>
     </div>
   );
