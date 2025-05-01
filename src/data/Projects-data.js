@@ -1,3 +1,5 @@
+// images imported from assets folder
+// This file contains the data for the projects displayed on the website.
 import organic from '../assets/Projects images/organic.png'
 import little from '../assets/Projects images/little.png'
 import oswal from '../assets/Projects images/oswal.png'
