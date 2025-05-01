@@ -12,9 +12,9 @@ function Home() {
       <AboutSummary />
       <Skills />
 
-      <Projects limit={4} />
+      <Projects limit={3} />
 
-      <Certificate limit={4} />
+      <Certificate limit={3} />
 
     </div>
   )

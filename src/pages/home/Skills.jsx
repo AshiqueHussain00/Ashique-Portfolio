@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import {
   FaHtml5,
@@ -15,6 +15,13 @@ import { SiTailwindcss } from "react-icons/si";
 const Skills = () => {
   const skillsRef = useRef(null);
   const isInView = useInView(skillsRef, { threshold: 0.3 });
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    if (isInView && !hasAnimated) {
+      setHasAnimated(true);
+    }
+  }, [isInView, hasAnimated]);
 
   const skillsData = [
     {
@@ -89,16 +96,11 @@ const Skills = () => {
 
   return (
     <section ref={skillsRef} className="w-full -z-10">
-      {isInView && (
+      {hasAnimated && (
         <div className="w-10/12 mx-auto ">
-          <motion.h1
-            className="mb-4 text-2xl font-bold text-center md:text-3xl"
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <h1 className="mb-4 text-2xl font-bold text-center md:text-3xl">
             My Skills
-          </motion.h1>
+          </h1>
           <div className="flex flex-col items-center w-full max-w-6xl gap-6 mx-auto lg:gap-16 lg:px-8 text-white-100 xmd:flex-row skills md:gap-20">
             {/* Left side: Linear skill bars */}
             <motion.div
@@ -127,9 +129,7 @@ const Skills = () => {
                         <div className="h-2 mt-2 bg-gray-700 border border-gray-800 rounded shadow-lg w-[13rem] xxs:w-[15rem] xsm:w-[18rem] sm:w-[24rem] smd:w-[30rem] xmd:w-[16rem] xl:w-[20rem]">
                           <motion.div
                             className="h-full bg-blue-500"
-                            style={{
-                              width: `${skill.level}%`,
-                            }}
+                            style={{ width: `${skill.level}%` }}
                             initial={{ width: "0%" }}
                             animate={{ width: `${skill.level}%` }}
                             transition={{ duration: 1.5 }}

@@ -14,7 +14,7 @@ const Card = ({ title, description, image, vie, git, buttonText1, buttonText2, t
                     {title}
                 </h5>
                 <p className="mb-4 text-gray-700 dark:text-gray-400">{description}</p>
-                
+
                 {/* Technologies Section */}
                 <div className="mb-4">
                     <ul className="flex flex-wrap mt-1 space-x-2">
@@ -31,6 +31,8 @@ const Card = ({ title, description, image, vie, git, buttonText1, buttonText2, t
                     {/* Read More Button */}
                     <Link
                         to={vie}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center px-6 py-2 text-sm font-medium transition-transform duration-300 transform rounded-lg shadow-lg text-white-100 bg-gradient-to-r from-blue-500 to-purple-500 hover:shadow-2xl hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300"
                     >
                         {buttonText1}
@@ -40,6 +42,8 @@ const Card = ({ title, description, image, vie, git, buttonText1, buttonText2, t
                     {/* GitHub Link Button */}
                     <Link
                         to={git}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center px-6 py-2 text-sm font-medium transition-transform duration-300 transform rounded-lg shadow-lg text-white-100 bg-gradient-to-r from-green-500 to-teal-500 hover:shadow-2xl hover:scale-110 focus:outline-none focus:ring-4 focus:ring-green-300"
                     >
                         {buttonText2}
