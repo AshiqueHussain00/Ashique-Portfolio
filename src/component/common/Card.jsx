@@ -13,12 +13,7 @@ const Card = ({ title, description, image, vie, git, buttonText1, buttonText2, t
                     {title}
                 </h5>
                 <p className="mb-4 text-gray-700 dark:text-gray-400">{description}</p>
-<<<<<<< HEAD
-
-                {/* Technologies Section */}
-=======
                 
->>>>>>> 4d09ef5cd691ad9627d365d62c642b1f4ac091d6
                 <div className="mb-4">
                     <ul className="flex flex-wrap mt-1 space-x-2">
                         {technologies && technologies.map((tech, index) => (
@@ -30,14 +25,8 @@ const Card = ({ title, description, image, vie, git, buttonText1, buttonText2, t
                 </div>
 
                 <div className="flex space-x-4">
-<<<<<<< HEAD
-                    {/* Read More Button */}
-                    <Link
-                        to={vie}
-=======
                     <a
                         href={vie}
->>>>>>> 4d09ef5cd691ad9627d365d62c642b1f4ac091d6
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center px-6 py-2 text-sm font-medium transition-transform duration-300 transform rounded-lg shadow-lg text-white-100 bg-gradient-to-r from-blue-500 to-purple-500 hover:shadow-2xl hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300"
@@ -46,14 +35,8 @@ const Card = ({ title, description, image, vie, git, buttonText1, buttonText2, t
                         <FaEye className="ml-2" />
                     </a>
 
-<<<<<<< HEAD
-                    {/* GitHub Link Button */}
-                    <Link
-                        to={git}
-=======
                     <a
                         href={git}
->>>>>>> 4d09ef5cd691ad9627d365d62c642b1f4ac091d6
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center px-6 py-2 text-sm font-medium transition-transform duration-300 transform rounded-lg shadow-lg text-white-100 bg-gradient-to-r from-green-500 to-teal-500 hover:shadow-2xl hover:scale-110 focus:outline-none focus:ring-4 focus:ring-green-300"
