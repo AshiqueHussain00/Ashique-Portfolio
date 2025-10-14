@@ -62,9 +62,7 @@ const HeroSection = () => {
                         data-aos="fade-up"
                         data-aos-delay="400"
                     >
-                        Experienced full-stack developer with 2+ years of hands-on experience in React, Tailwind CSS, and
-                        related technologies. Proficient in front-end and basic knowledge in back-end development, with a strong foundation in
-                        building responsive, scalable applications.
+                         2+ years of experience specializing in React.js and modern frontend technologies including Tailwind CSS and Framer Motion. Expert in crafting responsive, user-centric web applications with clean architecture and seamless UI/UX. Strong frontend capabilities complemented by backend fundamentals, enabling end-to-end project delivery. Proven track record in building scalable, performance-optimized solutions that drive user engagement and business results.
                     </p>
                     {/* Buttons */}
                     <div className="flex justify-center gap-4 mt-6 lg:justify-start">
