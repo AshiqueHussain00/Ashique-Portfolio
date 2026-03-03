@@ -11,6 +11,8 @@ import iot from '../assets/Certificate PDF/Introduction to IoT_Ashique Hussain A
 import excel from '../assets/Certificate PDF/EXCEL BEGINNER_Ashique Hussain Ansari.pdf'
 import diploma from '../assets/Certificate PDF/Deploma in computer application_Ashique Hussain Ansari.pdf'
 import internship from '../assets/Certificate PDF/Certificate Ashique Hussain Ansari .pdf'
+import eclinternship from '../assets/Certificate PDF/Ashique Apprentice Certificate.pdf'
+import ecl from '../assets/Certificate PDF/Sap_Ashique_Hussain_Asari.pdf'
 
 import sql2 from '../assets/Certificate img/Fundamentals of Database  What is SQL_Ashique Husssain Ansari.jpg'
 import react2 from "../assets/Certificate img/react_basic certificate Ashique Hussain Ansari.jpg"
@@ -25,8 +27,29 @@ import iot2 from '../assets/Certificate img/Introduction to IoT_Ashique Hussain 
 import excel2 from '../assets/Certificate img/EXCEL BEGINNER_Ashique Hussain Ansari.jpg'
 import diploma2 from '../assets/Certificate img/Deploma in computer application_Ashique Hussain Ansari.jpg'
 import internship2 from '../assets/Certificate img/Certificate Ashique Hussain Ansari.jpg'
+import eclInternshipImage from '../assets/Certificate img/apprentice.jpg'
+import ecl2 from '../assets/Certificate img/sap .jpg'
+
 
 export const Certificate = [
+  {
+    id: 0,
+    logo: eclInternshipImage,
+    title: 'Technical Apprenticeship Training on SAP - HCM Module',
+    issuer: ' National Apprenticeship Training Scheme - Under Eastern Coalfields Limited',
+    issueDate: 'Nov 2025',
+    skills: ['ERP SAP Administration', 'Data Analysis', 'MySQL Database Management', 'Project Management', 'Content Accuracy & Performance Maintenance'],
+    documentLink: eclinternship
+  },
+  {
+    id: 14,
+    logo: ecl2,
+    title: 'ECL Apprentice Certificate',
+    issuer: '  Eastern Coalfields Limited',
+    issueDate: 'Nov 2025',
+    skills: ['ERP SAP Administration',  'Project Management', 'Content Accuracy & Performance Maintenance','Documentation'],
+    documentLink: ecl
+  },
   {
     id: 1,
     logo: internship2,
