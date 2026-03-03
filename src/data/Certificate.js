@@ -10,7 +10,7 @@ import pythonWebinar from '../assets/Certificate PDF/Python library webinar_Ashi
 import iot from '../assets/Certificate PDF/Introduction to IoT_Ashique Hussain Ansari.pdf'
 import excel from '../assets/Certificate PDF/EXCEL BEGINNER_Ashique Hussain Ansari.pdf'
 import diploma from '../assets/Certificate PDF/Deploma in computer application_Ashique Hussain Ansari.pdf'
-import internship from '../assets/Certificate PDF/Certificate Ashique Hussain Ansari.pdf'
+import internship from '../assets/Certificate PDF/Ashique Apprentice Certificate.pdf'
 import eclinternship from '../assets/Certificate PDF/Ashique Apprentice Certificate.pdf'
 import ecl from '../assets/Certificate PDF/Sap_Ashique_Hussain_Asari.pdf'
 
