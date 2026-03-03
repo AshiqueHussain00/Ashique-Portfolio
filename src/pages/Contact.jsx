@@ -21,8 +21,8 @@ function Contact() {
         // Use EmailJS to send the email
         emailjs
             .send(
-                'service_a014xps',  // Replace with your service ID
-                'template_q59neux',  // Replace with your template ID
+                'service_lp02slg',  // Replace with your service ID
+                'template_ty94xth',  // Replace with your template ID
                 {
                     name: data.name,
                     email: data.email,
